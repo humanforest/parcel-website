@@ -1,18 +1,23 @@
 export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
-  name: "Next.js",
-  description:
-    "Beautifully designed components built with Radix UI and Tailwind CSS.",
+  name: "ForestParcel",
+  description: "Deliver parcels with HumanForest",
   mainNav: [
     {
       title: "Home",
       href: "/",
     },
+    {
+      title: "Become a Courier",
+      href: "/couriers",
+    },
+    {
+      title: "Blog",
+      href: "#",
+    },
   ],
   links: {
-    twitter: "https://twitter.com/shadcn",
-    github: "https://github.com/shadcn/ui",
-    docs: "https://ui.shadcn.com",
+    signup: "/application",
   },
 }

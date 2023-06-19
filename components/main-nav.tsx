@@ -4,6 +4,7 @@ import Link from "next/link"
 import { NavItem } from "@/types/nav"
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
+import { buttonVariants } from "@/components/ui/button"
 import { Icons } from "@/components/icons"
 
 interface MainNavProps {
@@ -25,10 +26,10 @@ export function MainNav({ items }: MainNavProps) {
                 <Link
                   key={index}
                   href={item.href}
-                  className={cn(
-                    "flex items-center text-sm font-medium text-muted-foreground",
-                    item.disabled && "cursor-not-allowed opacity-80"
-                  )}
+                  className={buttonVariants({
+                    variant: "ghost",
+                    rounded: "lg",
+                  })}
                 >
                   {item.title}
                 </Link>
