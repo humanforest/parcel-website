@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { BellRing, Camera, Check } from "lucide-react"
+import { Camera, Check } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import { Button, ButtonProps } from "@/components/ui/button"
@@ -224,8 +224,8 @@ export default function Page() {
                 the error of his ways and repealed the joke tax.
               </p>
               <blockquote className="mt-6 border-l-2 pl-6 italic">
-                "After all," he said, "everyone enjoys a good joke, so it's only
-                fair that they should pay for the privilege."
+                &quot;After all,&quot; he said, &quot;everyone enjoys a good joke, so it&apos;s only
+                fair that they should pay for the privilege.&quot;
               </blockquote>
             </div>
           </div>
