@@ -1,6 +1,8 @@
 import Link from "next/link"
 
+
 import { buttonVariants } from "@/components/ui/button"
+import { XMarkIcon } from '@heroicons/react/20/solid'
 
 export const metadata = {
   title: "Couriers",
@@ -33,6 +35,8 @@ const faqs = [
   // More questions...
 ]
 export default function Page() {
+
+
   return (
 
     <div className="bg-white">
@@ -56,7 +60,7 @@ export default function Page() {
                   href="/application"
                   className={buttonVariants({ variant: "primary", size: "xl" })}
                 >
-                  Get started
+                  Get Started
                 </Link>
 
               </div>
@@ -102,6 +106,32 @@ export default function Page() {
           </dl>
         </div>
       </div>
+      <>
+        {/*
+        Make sure you add some bottom padding to pages that include a sticky banner like this to prevent
+        your content from being obscured when the user scrolls to the bottom of the page.
+      */}
+
+
+
+        <div className="fixed inset-x-0 bottom-0">
+          <div className="flex flex-1 gap-x-6 bg-forest-600 px-6 py-2.5 sm:px-3.5 sm:before:flex-1">
+            <div className="flex flex-1 justify-end gap-40">
+              <Link
+                href="/application"
+                className={buttonVariants({ variant: "primary", size: "xl" })}
+              >
+                Get Started
+              </Link>
+              <button type="button" className="-m-3 p-3 focus-visible:outline-offset-[-4px]">
+                <span className="sr-only">Dismiss</span>
+                <XMarkIcon className="h-5 w-5 text-white" aria-hidden="true" />
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </>
     </div>
   )
 }
