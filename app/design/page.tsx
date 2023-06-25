@@ -207,8 +207,10 @@ export default function Page() {
 
           <div className="max-w-2xl space-y-10 md:col-span-2">
             <div className="prose">
-              <h1 className="outline-title text-5xl lg:text-6xl px-1">Outline title</h1>
-              <h1 className="stroke-rowan scroll-m-20 stroke-2 text-4xl font-extrabold tracking-tight lg:text-5xl">
+              <h1 className="outline-title px-1 text-5xl lg:text-6xl">
+                Outline title
+              </h1>
+              <h1 className="scroll-m-20 stroke-rowan stroke-2 text-4xl font-extrabold tracking-tight lg:text-5xl">
                 Taxing Laughter: The Joke Tax Chronicles
               </h1>
               <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
@@ -256,12 +258,12 @@ export default function Page() {
                       key={index}
                       className="mb-4 grid grid-cols-[25px_1fr] items-start pb-4 last:mb-0 last:pb-0"
                     >
-                      <span className="bg-forest flex h-2 w-2 translate-y-1 rounded-full" />
+                      <span className="flex h-2 w-2 translate-y-1 rounded-full bg-forest" />
                       <div className="space-y-1">
                         <p className="text-sm font-medium leading-none">
                           {notification.title}
                         </p>
-                        <p className="text-wood-500 text-sm">
+                        <p className="text-sm text-wood-500">
                           {notification.description}
                         </p>
                       </div>
