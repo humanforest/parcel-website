@@ -1,16 +1,14 @@
-'use client'
+"use client"
 
 import * as React from "react"
 import Link from "next/link"
+import { Disclosure } from "@headlessui/react"
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"
 
 import { NavItem } from "@/types/nav"
 import { siteConfig } from "@/config/site"
-import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
 import { Icons } from "@/components/icons"
-import { Fragment } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 interface MainNavProps {
   items?: NavItem[]
@@ -49,11 +47,12 @@ export function MainNav({ items }: MainNavProps) {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex h-16 justify-between">
               <div className="flex">
-                <div className="flex flex-shrink-0 items-center">
-
+                <div className="flex shrink-0 items-center">
                   <Link href="/" className="flex items-center space-x-2">
                     <Icons.logo className="h-6 w-6" />
-                    <span className="inline-block font-bold">{siteConfig.name}</span>
+                    <span className="inline-block font-bold">
+                      {siteConfig.name}
+                    </span>
                   </Link>
                 </div>
                 <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
@@ -94,14 +93,14 @@ export function MainNav({ items }: MainNavProps) {
             </div>
           </div>
 
-          <Disclosure.Panel className="sm:hidden fixed bg-white w-screen">
-            <div className="pt-2 pb-3 space-y-1">
+          <Disclosure.Panel className="fixed w-screen bg-white sm:hidden">
+            <div className="space-y-1 pb-3 pt-2">
               {items?.length ? (
                 <nav>
                   {items?.map((item, index) =>
                     item.href ? (
                       <Link key={index} href={item.href} passHref>
-                        <p className="block pl-3 pr-4 py-2 text-base font-medium text-gray-500 hover:bg-gray-50 hover:text-gray-700">
+                        <p className="block py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:bg-gray-50 hover:text-gray-700">
                           {item.title}
                         </p>
                       </Link>
@@ -111,7 +110,6 @@ export function MainNav({ items }: MainNavProps) {
               ) : null}
             </div>
           </Disclosure.Panel>
-
         </>
       )}
     </Disclosure>
