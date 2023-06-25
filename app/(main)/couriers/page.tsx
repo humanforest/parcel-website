@@ -3,7 +3,6 @@ import { PlusIcon } from '@heroicons/react/20/solid'
 
 
 import { buttonVariants } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
 import ScrollBanner from '@/components/banner';
 import { Scroll } from "lucide-react";
 
@@ -43,14 +42,13 @@ export default function Page() {
             <div className="mx-auto max-w-2xl lg:mx-0">
 
 
-              <h1 className="mt-24 text-4xl font-bold tracking-tight text-sky-100 sm:mt-10 sm:text-6xl">
+              <h1 className="mt-24 text-4xl font-bold tracking-tight text-white sm:mt-10 sm:text-6xl">
                 Boost your delivery.
                 <br />
                 Start using our app today.
               </h1>
               <p className="mt-6 text-lg leading-8 text-gray-100">
-                What we offer: Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
-                fugiat veniam occaecat fugiat aliqua.
+                Ride with HumanForest and deliver parcels the smart way.
               </p>
               <div className="mt-10 flex items-center gap-x-6 drop-shadow-xl">
                 <Link
@@ -78,156 +76,55 @@ export default function Page() {
 
       {/* Benefits Section */}
 
-      {/* USP One */}
-
-      <div className="bg-sky-100 pb-20  sm:pb-24 xl:pb-0">
-        <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
-          <div className="absolute left-[calc(50%-19rem)] top-[calc(50%-36rem)] transform-gpu blur-3xl">
-            <div
-              className="aspect-[500/1023] w-[68.5625rem] bg-forest-400 opacity-25"
-              style={{
-                clipPath:
-                  'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
-              }}
-            />
-          </div>
-        </div>
-        <div className="mx-auto flex max-w-7xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
-          <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none overflow-hidden">
-            <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
-              <img
-                className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl "
-                src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80"
-                alt=""
-              />
-            </div>
-          </div>
-          <div className="w-full max-w-2xl xl:max-w-none xl:flex-auto xl:px-16 xl:py-24">
-            <figure className="relative isolate pt-6 sm:pt-12">
-
-              <blockquote className="text-xl font-semibold leading-8 text-forest-900 sm:text-2xl sm:leading-9">
-                <p>
-                  Unique Selling Point 1
-                </p>
-              </blockquote>
-              <figcaption className="mt-8 text-base">
-                <div className="text-forest-900">Gravida quam mi erat tortor neque molestie. Auctor aliquet at porttitor a enim nunc suscipit
-                  tincidunt nunc. Et non lorem tortor posuere. Nunc eu scelerisque interdum eget tellus non nibh
-                  scelerisque bibendum.</div>
-
-              </figcaption>
-            </figure>
-          </div>
-        </div>
-      </div>
-
-      {/* USP Two */}
-
-      <div className="relative bg-sky-200 sm:pb-24 xl:pb-0">
-        <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
-          <div className="absolute left-[calc(50%-19rem)] top-[calc(50%-36rem)] transform-gpu blur-3xl">
-            <div
-              className="aspect-[1000/500] w-[68.5625rem] bg-forest-600 opacity-25"
-              style={{
-                clipPath:
-                  'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
-              }}
-            />
-          </div>
-        </div>
-        <div className="mx-auto flex max-w-7xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
-          <div className="w-full max-w-2xl xl:max-w-none xl:flex-auto xl:px-16 xl:py-24">
-            <figure className="relative isolate pt-6 sm:pt-12">
-              <blockquote className="text-xl font-semibold leading-8 text-forest-900 sm:text-2xl sm:leading-9">
-                <p>
-                  Unique Selling Point 2
-                </p>
-              </blockquote>
-              <figcaption className="mt-8 text-base">
-                <div className="text-forest-900">
-                  Gravida quam mi erat tortor neque molestie. Auctor aliquet at porttitor a enim nunc suscipit
-                  tincidunt nunc. Et non lorem tortor posuere. Nunc eu scelerisque interdum eget tellus non nibh
-                  scelerisque bibendum.
-                </div>
-              </figcaption>
-            </figure>
-          </div>
-          <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
-            <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
-              <img
-                className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl"
-                src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80"
-                alt=""
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* USP Three */}
-
-      <div className="relative bg-sky-300 pb-20 sm:pb-24 xl:pb-0">
-        <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
-          <div className="absolute left-[calc(50%-19rem)] top-[calc(50%-36rem)] transform-gpu blur-3xl">
-            <div
-              className="aspect-[1000/1000] w-[68.5625rem] bg-forest-600 opacity-25"
-              style={{
-                clipPath:
-                  'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
-              }}
-            />
-          </div>
-        </div>
-        <div className="mx-auto flex max-w-7xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
-          <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
-            <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
-              <img
-                className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl"
-                src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80"
-                alt=""
-              />
-            </div>
-          </div>
-          <div className="w-full max-w-2xl xl:max-w-none xl:flex-auto xl:px-16 xl:py-24">
-            <figure className="relative isolate pt-6 sm:pt-12">
-
-              <blockquote className="text-xl font-semibold leading-8 text-forest-900 sm:text-2xl sm:leading-9">
-                <p>
-                  Unique Selling Point 3
-                </p>
-              </blockquote>
-              <figcaption className="mt-8 text-base">
-                <div className="text-forest-900">Gravida quam mi erat tortor neque molestie. Auctor aliquet at porttitor a enim nunc suscipit
-                  tincidunt nunc. Et non lorem tortor posuere. Nunc eu scelerisque interdum eget tellus non nibh
-                  scelerisque bibendum.</div>
-
-              </figcaption>
-            </figure>
-          </div>
-        </div>
-      </div>
-
-
-      {/* <div className="bg-autumn-100 py-24 sm:py-32">
+      <div className="bg-white py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl lg:max-w-none">
-
-            <dl className="mt-16 grid grid-cols-1 gap-20 overflow-hidden rounded text-center sm:grid-cols-1 lg:grid-cols-3 drop-shadow-2xl">
-              {stats.map((stat) => (
-                <div key={stat.id} className="flex flex-col bg-autumn-600 p-8">
-                  <dt className="text-sm font-semibold leading-6 text-gray-100">{stat.name}</dt>
-                  <dd className="order-first text-3xl font-semibold tracking-tight text-white">{stat.value}</dd>
-                </div>
-              ))}
-            </dl>
+          <div className="flex justify-center items-center gap-x-16">
+            <div className="flex flex-col items-center">
+              <img
+                className="max-h-12 w-auto object-contain"
+                src="https://tailwindui.com/img/logos/158x48/transistor-logo-gray-900.svg"
+                alt="Transistor"
+                width={158}
+                height={48}
+              />
+              <h2 className="mt-2 text-center font-bold">Green Energy</h2>
+              <p className="text-center">Every ride you do saves on CO2</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <div>
+                <img
+                  className="max-h-12 w-auto object-contain"
+                  src="https://tailwindui.com/img/logos/158x48/reform-logo-gray-900.svg"
+                  alt="Reform"
+                  width={158}
+                  height={48}
+                />
+                <h2 className="mt-2 text-center font-bold">Fast Bikes</h2>
+                <p className="text-center">Reach speeds of up to 25km/h</p>
+              </div>
+            </div>
+            <div className="flex flex-col items-center">
+              <div>
+                <img
+                  className="max-h-12 w-auto object-contain"
+                  src="https://tailwindui.com/img/logos/158x48/tuple-logo-gray-900.svg"
+                  alt="Tuple"
+                  width={158}
+                  height={48}
+                />
+                <h2 className="mt-2 text-center font-bold">Earn Rewards</h2>
+                <p className="text-center">With our new TreeCoins</p>
+              </div>
+            </div>
           </div>
         </div>
-      </div> */}
+      </div>
+
 
       {/* FAQ */}
 
-      <div className="bg-white">
-        <div className="mx-auto max-w-7xl divide-y divide-gray-900/10 px-6 py-24 sm:py-32 lg:px-8 lg:py-40">
+      <div className="bg-autumn-100">
+        <div className="mx-auto max-w-7xl divide-y divide-gray-900/10 px-6 py-24 sm:py-32 lg:px-8 lg:py-10">
           <h2 className="text-2xl font-bold leading-10 tracking-tight text-gray-900">Frequently asked questions</h2>
           <dl className="mt-10 space-y-8 divide-y divide-gray-900/10">
             {faqs.map((faq) => (
