@@ -6,6 +6,7 @@ const navigation = [
   { name: "Press", href: "#" },
   { name: "Privacy Policy", href: "/privacy-policy" },
   { name: "Terms of Service", href: "/terms-of-service" },
+  { name: "Cookie Policy", href: "/cookie-policy" },
 ]
 
 export default function Footer() {
