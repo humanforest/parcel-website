@@ -12,8 +12,6 @@ export const metadata = {
 }
 
 const stats = [
-
-
   { id: 1, name: 'Green E-Bikes', value: 'USP' },
   { id: 2, name: 'Save Trees', value: 'USP' },
   { id: 3, name: 'Looks Cool', value: 'USP' },
@@ -41,15 +39,12 @@ export default function Page() {
 
 
   return (
-
     <div className="bg-white">
 
       <div className="relative bg-forest-700">
         <div className="mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8">
           <div className="px-6 pb-24 pt-10 sm:pb-32 lg:col-span-7 lg:px-0 lg:pb-56 lg:pt-48 xl:col-span-6">
             <div className="mx-auto max-w-2xl lg:mx-0">
-
-
               <h1 className="mt-24 text-4xl font-bold tracking-tight text-sky-100 sm:mt-10 sm:text-6xl">
                 Boost your delivery.
                 <br />
@@ -66,11 +61,7 @@ export default function Page() {
                 >
                   Sign Up
                 </Link>
-
               </div>
-
-
-
             </div>
           </div>
           <div className="relative lg:col-span-5 lg:-mr-8 xl:absolute xl:inset-0 xl:left-1/2 xl:mr-0">
@@ -217,7 +208,6 @@ export default function Page() {
       {/* <div className="bg-autumn-100 py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:max-w-none">
-
             <dl className="mt-16 grid grid-cols-1 gap-20 overflow-hidden rounded text-center sm:grid-cols-1 lg:grid-cols-3 drop-shadow-2xl">
               {stats.map((stat) => (
                 <div key={stat.id} className="flex flex-col bg-autumn-600 p-8">
