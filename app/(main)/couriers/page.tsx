@@ -3,7 +3,7 @@ import { PlusIcon } from '@heroicons/react/20/solid'
 
 
 import { buttonVariants } from "@/components/ui/button"
-
+import { Card } from "@/components/ui/card"
 import ScrollBanner from '@/components/banner';
 import { Scroll } from "lucide-react";
 
@@ -11,13 +11,6 @@ export const metadata = {
   title: "Couriers",
 }
 
-const stats = [
-
-
-  { id: 1, name: 'Green E-Bikes', value: 'USP' },
-  { id: 2, name: 'Save Trees', value: 'USP' },
-  { id: 3, name: 'Looks Cool', value: 'USP' },
-]
 const faqs = [
   {
     id: 1,
@@ -59,7 +52,7 @@ export default function Page() {
                 What we offer: Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
                 fugiat veniam occaecat fugiat aliqua.
               </p>
-              <div className="mt-10 flex items-center gap-x-6">
+              <div className="mt-10 flex items-center gap-x-6 drop-shadow-xl">
                 <Link
                   href="/application"
                   className={buttonVariants({ variant: "primary", size: "xl" })}
@@ -86,7 +79,8 @@ export default function Page() {
       {/* Benefits Section */}
 
       {/* USP One */}
-      <div className="relative  bg-autumn-200 pb-20  sm:pb-24 xl:pb-0">
+
+      <div className="bg-sky-100 pb-20  sm:pb-24 xl:pb-0">
         <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
           <div className="absolute left-[calc(50%-19rem)] top-[calc(50%-36rem)] transform-gpu blur-3xl">
             <div
@@ -129,7 +123,7 @@ export default function Page() {
 
       {/* USP Two */}
 
-      <div className="relative bg-autumn-300 sm:pb-24 xl:pb-0">
+      <div className="relative bg-sky-200 sm:pb-24 xl:pb-0">
         <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
           <div className="absolute left-[calc(50%-19rem)] top-[calc(50%-36rem)] transform-gpu blur-3xl">
             <div
@@ -172,7 +166,7 @@ export default function Page() {
 
       {/* USP Three */}
 
-      <div className="relative bg-autumn-400 pb-20 sm:pb-24 xl:pb-0">
+      <div className="relative bg-sky-300 pb-20 sm:pb-24 xl:pb-0">
         <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
           <div className="absolute left-[calc(50%-19rem)] top-[calc(50%-36rem)] transform-gpu blur-3xl">
             <div
