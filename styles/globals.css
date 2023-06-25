@@ -78,4 +78,11 @@
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
+  .outline-title{
+    background-image: linear-gradient(black, black);
+    background-clip: text;
+    -webkit-text-fill-color: #F59E0B;
+    -webkit-text-stroke: 0.1em transparent;
+    filter: drop-shadow(0rem 0.15rem black);
+  }
 }
