@@ -207,7 +207,8 @@ export default function Page() {
 
           <div className="max-w-2xl space-y-10 md:col-span-2">
             <div className="prose">
-              <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
+              <h1 className="outline-title text-5xl lg:text-6xl px-1">Outline title</h1>
+              <h1 className="stroke-rowan scroll-m-20 stroke-2 text-4xl font-extrabold tracking-tight lg:text-5xl">
                 Taxing Laughter: The Joke Tax Chronicles
               </h1>
               <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
@@ -224,8 +225,9 @@ export default function Page() {
                 the error of his ways and repealed the joke tax.
               </p>
               <blockquote className="mt-6 border-l-2 pl-6 italic">
-                &quot;After all,&quot; he said, &quot;everyone enjoys a good joke, so it&apos;s only
-                fair that they should pay for the privilege.&quot;
+                &quot;After all,&quot; he said, &quot;everyone enjoys a good
+                joke, so it&apos;s only fair that they should pay for the
+                privilege.&quot;
               </blockquote>
             </div>
           </div>
