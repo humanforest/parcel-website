@@ -19,31 +19,6 @@ interface MainNavProps {
 
 export function MainNav({ items }: MainNavProps) {
   return (
-    // <div className="flex gap-6 md:gap-10">
-    //   <Link href="/" className="flex items-center space-x-2">
-    //     <Icons.logo className="h-6 w-6" />
-    //     <span className="inline-block font-bold">{siteConfig.name}</span>
-    //   </Link>
-    //   {items?.length ? (
-    //     <nav className="flex gap-6">
-    //       {items?.map(
-    //         (item, index) =>
-    //           item.href && (
-    //             <Link
-    //               key={index}
-    //               href={item.href}
-    //               className={buttonVariants({
-    //                 variant: "ghost",
-    //                 rounded: "lg",
-    //               })}
-    //             >
-    //               {item.title}
-    //             </Link>
-    //           )
-    //       )}
-    //     </nav>
-    //   ) : null}
-    // </div>
     <Disclosure as="nav" className="bg-white shadow">
       {({ open }) => (
         <>
@@ -59,7 +34,6 @@ export function MainNav({ items }: MainNavProps) {
                   </Link>
                 </div>
                 <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
-                  {/* Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" */}
                   {items?.length ? (
                     <nav className="flex gap-6">
                       {items?.map(
@@ -96,21 +70,30 @@ export function MainNav({ items }: MainNavProps) {
             </div>
           </div>
 
-          <Disclosure.Panel className="fixed w-screen bg-white sm:hidden">
+          <Disclosure.Panel className="sm:hidden">
             <div className="space-y-1 pb-3 pt-2">
-              {items?.length ? (
-                <nav>
-                  {items?.map((item, index) =>
-                    item.href ? (
-                      <Link key={index} href={item.href} passHref>
-                        <p className="block py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:bg-gray-50 hover:text-gray-700">
-                          {item.title}
-                        </p>
-                      </Link>
-                    ) : null
-                  )}
-                </nav>
-              ) : null}
+              {/* Current: "bg-indigo-50 border-indigo-500 text-indigo-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" */}
+              <Disclosure.Button
+                as="a"
+                href="/couriers"
+                className="block border-l-4 border-forest-500 bg-forest-50 py-2 pl-3 pr-4 text-base font-medium text-forest-700"
+              >
+                Home
+              </Disclosure.Button>
+              <Disclosure.Button
+                as="a"
+                href="/application"
+                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-wood-500 hover:border-forest-300 hover:bg-forest-50 hover:text-wood-700"
+              >
+                Become a Courier
+              </Disclosure.Button>
+              <Disclosure.Button
+                as="a"
+                href="#"
+                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-wood-500 hover:border-forest-300 hover:bg-forest-50 hover:text-wood-700"
+              >
+                Blog
+              </Disclosure.Button>
             </div>
           </Disclosure.Panel>
         </>
