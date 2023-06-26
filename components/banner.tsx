@@ -1,5 +1,6 @@
 "use client"
 
+
 import { useEffect, useState } from "react"
 import Link from "next/link"
 import { XMarkIcon } from "@heroicons/react/20/solid"
@@ -13,6 +14,7 @@ const ScrollBanner = () => {
     setShowBanner(false)
   }
 
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollThreshold = 50 // Adjust this value as per your requirement
@@ -20,13 +22,16 @@ const ScrollBanner = () => {
       setShowBanner(shouldShowBanner)
     }
 
+
     window.addEventListener("scroll", handleScroll)
     return () => {
+
       window.removeEventListener("scroll", handleScroll)
     }
   }, [])
 
   useEffect(() => {
+
     if (!showBanner) {
       sessionStorage.setItem("bannerDismissed", "true")
     }
@@ -64,6 +69,7 @@ const ScrollBanner = () => {
         </div>
       )}
     </>
+
   )
 }
 
