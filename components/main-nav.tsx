@@ -1,8 +1,11 @@
 "use client"
 
 import * as React from "react"
+import { Fragment } from "react"
 import Link from "next/link"
-import { Disclosure } from "@headlessui/react"
+
+import { Disclosure, Menu, Transition } from "@headlessui/react"
+
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"
 
 import { NavItem } from "@/types/nav"
