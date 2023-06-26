@@ -1,5 +1,6 @@
 "use client"
 
+
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 import { XMarkIcon } from '@heroicons/react/20/solid';
@@ -12,12 +13,11 @@ const ScrollBanner = () => {
         setShowBanner(false);
     };
 
-    useEffect(() => {
-        const handleScroll = () => {
-            const scrollThreshold = 50; // Adjust this value as per your requirement
-            const shouldShowBanner = window.scrollY > scrollThreshold;
-            setShowBanner(shouldShowBanner);
-        };
+
+const ScrollBanner = () => {
+  const [showBanner, setShowBanner] = useState(false)
+  // const router = useRouter();
+
 
         window.addEventListener('scroll', handleScroll);
         return () => {

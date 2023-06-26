@@ -1,10 +1,10 @@
 import Link from "next/link"
-import { PlusIcon } from '@heroicons/react/20/solid'
-
 
 import { buttonVariants } from "@/components/ui/button"
+
 import ScrollBanner from '@/components/banner';
-import { Scroll } from "lucide-react";
+
+
 
 export const metadata = {
   title: "Couriers",
@@ -20,35 +20,36 @@ const faqs = [
   {
     id: 2,
     question: "Can i work if i'm not a UK national?",
-    answer: "ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    answer:
+      "ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   },
   {
     id: 3,
     question: "I don't know how to ride a bike, what do I do?",
-    answer: "Go learn then come back."
-  }
+    answer: "Go learn then come back.",
+  },
   // More questions...
 ]
 export default function Page() {
-
-
   return (
-
     <div className="bg-white">
-
       <div className="relative bg-forest-700">
         <div className="mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8">
           <div className="px-6 pb-24 pt-10 sm:pb-32 lg:col-span-7 lg:px-0 lg:pb-56 lg:pt-48 xl:col-span-6">
             <div className="mx-auto max-w-2xl lg:mx-0">
 
 
-              <h1 className="mt-24 text-4xl font-bold tracking-tight text-white sm:mt-10 sm:text-6xl">
+
+              <h1 className="mt-24 text-4xl font-bold tracking-tight text-sky-100 sm:mt-10 sm:text-6xl">
+
                 Boost your delivery.
                 <br />
                 Start using our app today.
               </h1>
               <p className="mt-6 text-lg leading-8 text-gray-100">
+
                 Ride with HumanForest and deliver parcels the smart way.
+
               </p>
               <div className="mt-10 flex items-center gap-x-6 drop-shadow-xl">
                 <Link
@@ -57,11 +58,7 @@ export default function Page() {
                 >
                   Sign Up
                 </Link>
-
               </div>
-
-
-
             </div>
           </div>
           <div className="relative lg:col-span-5 lg:-mr-8 xl:absolute xl:inset-0 xl:left-1/2 xl:mr-0">
@@ -76,10 +73,12 @@ export default function Page() {
 
       {/* Benefits Section */}
 
+
       <div className="bg-white py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="flex justify-center items-center gap-x-16">
             <div className="flex flex-col items-center">
+
               <img
                 className="max-h-12 w-auto object-contain"
                 src="https://tailwindui.com/img/logos/158x48/transistor-logo-gray-900.svg"
@@ -90,6 +89,7 @@ export default function Page() {
               <h2 className="mt-2 text-center font-bold">Green Energy</h2>
               <p className="text-center">Every ride you do saves on CO2</p>
             </div>
+
             <div className="flex flex-col items-center">
               <div>
                 <img
@@ -126,12 +126,20 @@ export default function Page() {
       <div className="bg-autumn-100">
         <div className="mx-auto max-w-7xl divide-y divide-gray-900/10 px-6 py-24 sm:py-32 lg:px-8 lg:py-10">
           <h2 className="text-2xl font-bold leading-10 tracking-tight text-gray-900">Frequently asked questions</h2>
+
           <dl className="mt-10 space-y-8 divide-y divide-gray-900/10">
             {faqs.map((faq) => (
-              <div key={faq.id} className="pt-8 lg:grid lg:grid-cols-12 lg:gap-8">
-                <dt className="text-base font-semibold leading-7 text-gray-900 lg:col-span-5">{faq.question}</dt>
+              <div
+                key={faq.id}
+                className="pt-8 lg:grid lg:grid-cols-12 lg:gap-8"
+              >
+                <dt className="text-base font-semibold leading-7 text-gray-900 lg:col-span-5">
+                  {faq.question}
+                </dt>
                 <dd className="mt-4 lg:col-span-7 lg:mt-0">
-                  <p className="text-base leading-7 text-gray-600">{faq.answer}</p>
+                  <p className="text-base leading-7 text-gray-600">
+                    {faq.answer}
+                  </p>
                 </dd>
               </div>
             ))}
@@ -144,10 +152,7 @@ export default function Page() {
         your content from being obscured when the user scrolls to the bottom of the page.
       */}
 
-
-
         <ScrollBanner />
-
       </>
     </div>
   )
