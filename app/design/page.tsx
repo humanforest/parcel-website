@@ -224,8 +224,9 @@ export default function Page() {
                 the error of his ways and repealed the joke tax.
               </p>
               <blockquote className="mt-6 border-l-2 pl-6 italic">
-                &quot;After all,&quot; he said, &quot;everyone enjoys a good joke, so it&apos;s only
-                fair that they should pay for the privilege.&quot;
+                &quot;After all,&quot; he said, &quot;everyone enjoys a good
+                joke, so it&apos;s only fair that they should pay for the
+                privilege.&quot;
               </blockquote>
             </div>
           </div>
@@ -254,12 +255,12 @@ export default function Page() {
                       key={index}
                       className="mb-4 grid grid-cols-[25px_1fr] items-start pb-4 last:mb-0 last:pb-0"
                     >
-                      <span className="bg-forest flex h-2 w-2 translate-y-1 rounded-full" />
+                      <span className="flex h-2 w-2 translate-y-1 rounded-full bg-forest" />
                       <div className="space-y-1">
                         <p className="text-sm font-medium leading-none">
                           {notification.title}
                         </p>
-                        <p className="text-wood-500 text-sm">
+                        <p className="text-sm text-wood-500">
                           {notification.description}
                         </p>
                       </div>

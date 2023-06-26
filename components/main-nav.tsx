@@ -1,16 +1,16 @@
-'use client'
+"use client"
 
 import * as React from "react"
+import { Fragment } from "react"
 import Link from "next/link"
+import { Disclosure, Menu, Transition } from "@headlessui/react"
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"
 
 import { NavItem } from "@/types/nav"
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
 import { Icons } from "@/components/icons"
-import { Fragment } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 interface MainNavProps {
   items?: NavItem[]
@@ -49,11 +49,12 @@ export function MainNav({ items }: MainNavProps) {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex h-16 justify-between">
               <div className="flex">
-                <div className="flex flex-shrink-0 items-center">
-
+                <div className="flex shrink-0 items-center">
                   <Link href="/" className="flex items-center space-x-2">
                     <Icons.logo className="h-6 w-6" />
-                    <span className="inline-block font-bold">{siteConfig.name}</span>
+                    <span className="inline-block font-bold">
+                      {siteConfig.name}
+                    </span>
                   </Link>
                 </div>
                 <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
@@ -119,7 +120,6 @@ export function MainNav({ items }: MainNavProps) {
                 Blog
               </Disclosure.Button>
             </div>
-
           </Disclosure.Panel>
         </>
       )}
