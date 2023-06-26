@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card"
 import TypeformEmbed from "@/components/ui/typeform"
-// import Image from "next/image"
+
 
 const stats = [
   {
@@ -41,17 +41,16 @@ export default function Page() {
                 Apply to get started
               </h1>
               <div className="mt-6 max-w-xl lg:mt-6 xl:col-end-1 xl:row-start-1">
-                <Card className="drop shadow-xl">
+                <Card className="drop-shadow-xl">
                   <TypeformEmbed />
                 </Card>
               </div>
               <div className="mt-10 aspect-[6/5] w-full max-w-lg rounded-2xl object-cover sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-36">
     <img
-        src="https://images.unsplash.com/photo-1567532900872-f4e906cbf06a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1280&q=80"
+        src="https://www.intelligenttransport.com/wp-content/uploads/HumanForest-5.jpg"
         alt=""
         width={1280}
         height={1024} // Adjust the height based on the image aspect ratio
-        layout="responsive"
         className="rounded-2xl"
     />
 </div>
@@ -76,14 +75,14 @@ export default function Page() {
               {stats.map((stat) => (
                 <div
                   key={stat.id}
-                  className="flex flex-col rounded-2xl bg-forest-600 p-8 drop-shadow-md"
+                  className="flex flex-col rounded-2xl bg-forest-500 p-8 drop-shadow-md"
                 >
                   <img
                     src={stat.image}
                     alt={stat.name}
                     className="mx-auto my-4 h-64 w-auto"
                   />
-                  <dt className="text-sm font-semibold leading-6 text-gray-300">
+                  <dt className="text-sm font-semibold leading-6 text-wood-100">
                     {stat.name}
                   </dt>
                   <dd className="order-first text-3xl font-semibold tracking-tight text-white">
@@ -95,6 +94,15 @@ export default function Page() {
           </div>
         </div>
       </div>
+      <div className="relative">
+  <img
+    src="https://pbs.twimg.com/card_img/1672134575324110849/wg8gPEIY?format=jpg&name=large"
+    className="opacity-50 bg-forest-50"
+    alt=""
+  />
+</div>
+
     </div>
+    
   )
 }
