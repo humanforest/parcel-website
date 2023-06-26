@@ -1,7 +1,4 @@
-import { Input } from "@/components/ui/input"
-import Link from "next/link"
-import { buttonVariants } from "@/components/ui/button"
-import { Label } from "@/components/ui/label"
+
 import { Card } from "@/components/ui/card"
 import TypeformEmbed from "@/components/ui/typeform"
 
@@ -32,7 +29,7 @@ export default function Page() {
               Apply to get started
             </h1>
             <div className="mt-6 max-w-xl lg:mt-6 xl:col-end-1 xl:row-start-1">
-              <Card className="">
+              <Card className="drop shadow-xl">
                 <TypeformEmbed />
               </Card>
             </div>
@@ -61,7 +58,7 @@ export default function Page() {
           </div>
           <dl className="mt-16 grid grid-cols-1 gap-8 overflow-hidden  text-center sm:grid-cols-1 lg:grid-cols-3 drop-shadow-lg">
             {stats.map((stat) => (
-              <div key={stat.id} className="bg-forest-600 flex flex-col rounded-2xl p-8">
+              <div key={stat.id} className="bg-forest-600 drop-shadow-md flex flex-col rounded-2xl p-8">
                 <img src={stat.image} alt={stat.name} className="mx-auto h-64 w-auto mb-4 mt-4" />
                 <dt className="text-sm font-semibold leading-6 text-gray-300">{stat.name}</dt>
                 <dd className="order-first text-3xl font-semibold tracking-tight text-white">{stat.value}</dd>

@@ -27,7 +27,7 @@ const faqs = [
     question: "I don't know how to ride a bike, what do I do?",
     answer: "Go learn then come back."
   }
-  // More questions...
+
 ]
 export default function Page() {
 
@@ -82,7 +82,7 @@ export default function Page() {
             <div className="flex flex-col items-center">
               <img
                 className="max-h-12 w-auto object-contain"
-                src="https://tailwindui.com/img/logos/158x48/transistor-logo-gray-900.svg"
+                src="$icon-l-light-bell-on"
                 alt="Transistor"
                 width={158}
                 height={48}
@@ -139,12 +139,6 @@ export default function Page() {
         </div>
       </div>
       <>
-        {/*
-        Make sure you add some bottom padding to pages that include a sticky banner like this to prevent
-        your content from being obscured when the user scrolls to the bottom of the page.
-      */}
-
-
 
         <ScrollBanner />
 
