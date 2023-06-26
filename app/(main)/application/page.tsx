@@ -51,7 +51,6 @@ export default function Page() {
         alt=""
         width={1280}
         height={1024} // Adjust the height based on the image aspect ratio
-        layout="responsive"
         className="rounded-2xl"
     />
 </div>
