@@ -3,14 +3,14 @@ import Link from "next/link"
 import { buttonVariants } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"
 import { Card } from "@/components/ui/card"
-
+import TypeformEmbed from "@/components/ui/typeform"
 
 const stats = [
 
 
-  { id: 1, name: 'Download the app', value: 'Step One' },
-  { id: 2, name: 'Login', value: 'Step Two' },
-  { id: 3, name: 'Start Earning!', value: 'Step Three' },
+  { id: 1, name: 'Download the app', value: 'Step One', image: 'https://freepngimg.com/thumb/smartphone/21604-1-smartphone-transparent-background.png' },
+  { id: 2, name: 'Login', value: 'Step Two', image: 'https://freepngimg.com/thumb/smartphone/21604-1-smartphone-transparent-background.png' },
+  { id: 3, name: 'Start Earning!', value: 'Step Three', image: 'https://freepngimg.com/thumb/smartphone/21604-1-smartphone-transparent-background.png' },
 
 ]
 
@@ -21,7 +21,8 @@ export const metadata = {
 
 export default function Page() {
   return (<div>
-    <div className="bg-forest-800">
+    <div className="bg-forest-700">
+
 
       <div className="relative overflow-hidden">
 
@@ -30,141 +31,9 @@ export default function Page() {
             <h1 className="max-w-2xl text-center text-4xl font-bold tracking-tight text-white sm:text-6xl lg:col-span-2 xl:col-auto">
               Apply to get started
             </h1>
-            <div className="mt-6 max-w-xl lg:mt-0 xl:col-end-1 xl:row-start-1">
-              <Card className="p-4 mt-4 flex-wrap">
-                <form>
-                  <div className="space-y-12">
-                    <div className="border-b border-gray-900/10 pb-12">
-                      <h2 className="text-base font-semibold leading-7 text-gray-900">Personal Information</h2>
-                      <div className="mt-5 grid grid-cols-4 gap-x-6 gap-y-8 ">
-                        <div className="col-span-2">
-                          <Label htmlFor="first-name" className="block text-sm font-medium leading-6 text-gray-900">
-                            First name
-                          </Label>
-                          <div className="mt-2">
-                            <Input
-                              type="text"
-                              name="first-name"
-                              id="first-name"
-                              autoComplete="given-name"
-                              className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                            />
-                          </div>
-                        </div>
-
-                        <div className="col-span-2">
-                          <Label htmlFor="last-name" className="block text-sm font-medium leading-6 text-gray-900">
-                            Last name
-                          </Label>
-                          <div className="mt-2">
-                            <Input
-                              type="text"
-                              name="last-name"
-                              id="last-name"
-                              autoComplete="family-name"
-                              className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                            />
-                          </div>
-                        </div>
-
-                        <div className="col-span-4">
-                          <Label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
-                            Email address
-                          </Label>
-                          <div className="mt-2">
-                            <Input
-                              id="email"
-                              name="email"
-                              type="email"
-                              autoComplete="email"
-                              className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                            />
-                          </div>
-                        </div>
-
-                        <div className="col-span-3">
-                          <Label htmlFor="country" className="block text-sm font-medium leading-6 text-gray-900">
-                            Country
-                          </Label>
-                          <div className="mt-2">
-                            <Input
-                              type="text"
-                              id="country"
-                              name="country"
-                              autoComplete="country-name"
-                              className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
-
-                            />
-                          </div>
-                        </div>
-
-                        <div className="col-span-4">
-                          <Label htmlFor="street-address" className="block text-sm font-medium leading-6 text-gray-900">
-                            Street address
-                          </Label>
-                          <div className="mt-2">
-                            <Input
-                              type="text"
-                              name="street-address"
-                              id="street-address"
-                              autoComplete="street-address"
-                              className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                            />
-                          </div>
-                        </div>
-
-                        <div className="col-span-2 col-start-1">
-                          <Label htmlFor="city" className="block text-sm font-medium leading-6 text-gray-900">
-                            City
-                          </Label>
-                          <div className="mt-2">
-                            <Input
-                              type="text"
-                              name="city"
-                              id="city"
-                              autoComplete="address-level2"
-                              className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                            />
-                          </div>
-                        </div>
-
-
-
-                        <div className="col-span-2">
-                          <Label htmlFor="postal-code" className="block text-sm font-medium leading-6 text-gray-900">
-                            Postcode
-                          </Label>
-                          <div className="mt-2">
-                            <Input
-                              type="text"
-                              name="postal-code"
-                              id="postal-code"
-                              autoComplete="postal-code"
-                              className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="mt-6 flex items-center justify-end gap-x-6">
-                    <button type="button" className="text-sm font-semibold leading-6 text-gray-900">
-                      Cancel
-                    </button>
-                    <button className="drop-shadow-lg">
-
-                      <Link
-                        href="/application"
-                        className={buttonVariants({ variant: "primary", size: "md" })}
-                      >
-                        Sign Up
-                      </Link>
-
-
-                    </button>
-                  </div>
-                </form>
+            <div className="mt-6 max-w-xl lg:mt-6 xl:col-end-1 xl:row-start-1">
+              <Card className="">
+                <TypeformEmbed />
               </Card>
             </div>
             <img
@@ -190,9 +59,10 @@ export default function Page() {
               Follow these steps to start working!
             </p>
           </div>
-          <dl className="bg-forest-700 mt-16 grid grid-cols-1 gap-8 overflow-hidden rounded-2xl text-center sm:grid-cols-1 lg:grid-cols-3 drop-shadow-lg">
+          <dl className="mt-16 grid grid-cols-1 gap-8 overflow-hidden  text-center sm:grid-cols-1 lg:grid-cols-3 drop-shadow-lg">
             {stats.map((stat) => (
-              <div key={stat.id} className="flex flex-col bg-white/5 p-8">
+              <div key={stat.id} className="bg-forest-600 flex flex-col rounded-2xl p-8">
+                <img src={stat.image} alt={stat.name} className="mx-auto h-64 w-auto mb-4 mt-4" />
                 <dt className="text-sm font-semibold leading-6 text-gray-300">{stat.name}</dt>
                 <dd className="order-first text-3xl font-semibold tracking-tight text-white">{stat.value}</dd>
               </div>
