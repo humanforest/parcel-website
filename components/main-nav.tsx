@@ -3,12 +3,13 @@
 import * as React from "react"
 import { Fragment } from "react"
 import Link from "next/link"
+
 import { Disclosure, Menu, Transition } from "@headlessui/react"
+
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"
 
 import { NavItem } from "@/types/nav"
 import { siteConfig } from "@/config/site"
-import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
 import { Icons } from "@/components/icons"
 
@@ -83,7 +84,7 @@ export function MainNav({ items }: MainNavProps) {
 
               <div className="-mr-2 flex items-center sm:hidden">
                 {/* Mobile menu button */}
-                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-forest-800">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
@@ -95,30 +96,21 @@ export function MainNav({ items }: MainNavProps) {
             </div>
           </div>
 
-          <Disclosure.Panel className="sm:hidden">
+          <Disclosure.Panel className="fixed w-screen bg-white sm:hidden">
             <div className="space-y-1 pb-3 pt-2">
-              {/* Current: "bg-indigo-50 border-indigo-500 text-indigo-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" */}
-              <Disclosure.Button
-                as="a"
-                href="/couriers"
-                className="block border-l-4 border-indigo-500 bg-indigo-50 py-2 pl-3 pr-4 text-base font-medium text-indigo-700"
-              >
-                Home
-              </Disclosure.Button>
-              <Disclosure.Button
-                as="a"
-                href="/application"
-                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
-              >
-                Become a Courier
-              </Disclosure.Button>
-              <Disclosure.Button
-                as="a"
-                href="#"
-                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
-              >
-                Blog
-              </Disclosure.Button>
+              {items?.length ? (
+                <nav>
+                  {items?.map((item, index) =>
+                    item.href ? (
+                      <Link key={index} href={item.href} passHref>
+                        <p className="block py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:bg-gray-50 hover:text-gray-700">
+                          {item.title}
+                        </p>
+                      </Link>
+                    ) : null
+                  )}
+                </nav>
+              ) : null}
             </div>
           </Disclosure.Panel>
         </>
