@@ -6,11 +6,11 @@ export const siteConfig = {
   mainNav: [
     {
       title: "Home",
-      href: "/",
+      href: "/couriers",
     },
     {
       title: "Become a Courier",
-      href: "/couriers",
+      href: "/application",
     },
     {
       title: "Blog",
