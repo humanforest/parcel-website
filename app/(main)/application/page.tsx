@@ -7,21 +7,22 @@ const stats = [
     name: "Download the app",
     value: "Step One",
     image:
-      "https://freepngimg.com/thumb/smartphone/21604-1-smartphone-transparent-background.png",
-  },
+"https://i.ibb.co/0Qq2FWy/Step1.png"
+ 
+},
   {
     id: 2,
     name: "Login",
     value: "Step Two",
     image:
-      "https://freepngimg.com/thumb/smartphone/21604-1-smartphone-transparent-background.png",
+      "https://i.ibb.co/j4nBF0W/StepTwo.png"
   },
   {
     id: 3,
     name: "Start Earning!",
     value: "Step Three",
     image:
-      "https://freepngimg.com/thumb/smartphone/21604-1-smartphone-transparent-background.png",
+      "https://i.ibb.co/vwHpfm3/Step-Three.png",
   },
 ]
 
@@ -79,7 +80,7 @@ export default function Page() {
                   <img
                     src={stat.image}
                     alt={stat.name}
-                    className="mx-auto my-4 h-64 w-auto"
+                    className="mx-auto my-4 h-80 w-auto"
                   />
                   <dt className="text-sm font-semibold leading-6 text-wood-100">
                     {stat.name}
