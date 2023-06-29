@@ -12,20 +12,35 @@ export const metadata = {
 const faqs = [
   {
     id: 1,
-    question: "What's the best thing about Switzerland?",
-    answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+    question: "What are the requirements for being a rider?",
+    answer: ` General requirements:
+   
+    · Age: +18 for e-Bike riders or +21 for e-Moped riders.
+    · HumanForest user account.
+    · Equipment: You must have your own helmet and backpack (minimum size: 35cm x 26cm x       35cm).
+    · Smartphone.
+    · UK bank account.
+    
+ Documentation:
+
+    · Proof of ID.
+    · Proof of address: You can provide a driving licence, bank statement, or utilities bill.
+    · Right to work in the UK: Provide a passport, visa, or immigration status document.`
   },
   {
     id: 2,
-    question: "Can i work if i'm not a UK national?",
-    answer:
-      "ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    question: "What vehicles are available for delivering Parcels?",
+    answer: `When delivering with HumanForest Parcel, it is mandatory to exclusively use our eBike or eMoped fleet.  We're all about eco-friendly delivery here, so we don't permit the use of cars or personal bikes and mopeds. 
+    
+Your commitment to our sustainable approach is greatly appreciated!`
   },
   {
     id: 3,
-    question: "I don't know how to ride a bike, what do I do?",
-    answer: "Go learn then come back.",
+    question: "How much do I get paid?",
+    answer: `When you complete a delivery, you will receive payment based on factors such as distance and other variables. Before accepting a job, we will always provide you with the exact amount you will earn. 
+For each delivery, you are guaranteed a minimum pay of £5.7, regardless of the distance. In addition, you will earn £2 per extra kilometre covered. This payment structure applies to both bikes and e-mopeds. 
+    
+Your daily earnings will be visible, and fees are paid on a weekly basis. Furthermore, as a rider, you will receive 100% of any tips you receive, which are currently provided in cash.`
   },
 
 ]
@@ -250,7 +265,7 @@ export default function Page() {
                   {faq.question}
                 </dt>
                 <dd className="mt-4 lg:col-span-7 lg:mt-0">
-                  <p className="text-base leading-7 text-gray-600">
+                  <p className="text-base leading-7 text-gray-600 whitespace-pre-line whitespace-break-spaces ...">
                     {faq.answer}
                   </p>
                 </dd>
