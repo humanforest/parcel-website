@@ -1,5 +1,6 @@
 "use client"
-import { Widget } from "@typeform/embed-react";
+
+import { Widget } from "@typeform/embed-react"
 
 export default function Page() {
   return (
