@@ -306,10 +306,12 @@ export default function Example() {
         <div className="relative isolate z-10 mt-32 sm:mt-40">
           <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div className="mx-auto flex max-w-2xl flex-col gap-16 border-2 border-forest-900 bg-white px-6 py-16 sm:rounded-3xl sm:p-8 lg:mx-0 lg:max-w-none lg:flex-row lg:items-center lg:py-20 xl:gap-x-20 xl:px-20">
-              <img
+              <Image
                 className="h-96 w-full flex-none rounded-2xl object-cover shadow-xl lg:h-auto lg:max-w-sm"
                 src="/images/hero.jpg"
                 alt=""
+                width={400}
+                height={600}
               />
               <div className="w-full flex-auto">
                 <h2 className="text-3xl font-bold tracking-tight text-wood-900 sm:text-4xl">
