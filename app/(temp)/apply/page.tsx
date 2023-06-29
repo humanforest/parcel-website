@@ -135,7 +135,7 @@ export default function Example() {
               </p>
               <div className="mt-10 flex items-center gap-x-6">
                 <Link
-                  href="/application-form"
+                  href={"/application-form"}
                   className={buttonVariants({ size: "2xl" })}
                 >
                   Apply now
@@ -263,7 +263,7 @@ export default function Example() {
                     {feature.description}
                   </p>
                   <Link
-                    href="/application-form"
+                    href={"/application-form"}
                     className={buttonVariants({ size: "xl" })}
                   >
                     Apply now
@@ -373,7 +373,7 @@ export default function Example() {
                 </div>
                 <div className="mt-10 flex">
                   <Link
-                    href="/application-form"
+                    href={"/application-form"}
                     className={buttonVariants({ size: "2xl" })}
                   >
                     Apply now
@@ -426,7 +426,7 @@ export default function Example() {
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Link
-                href="/application-form"
+                href={"/application-form"}
                 className={buttonVariants({ size: "2xl" })}
               >
                 Apply now
