@@ -419,8 +419,8 @@ export default function Example() {
               Start using ForestParcel today.
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
-              Let's get you started with a free account. Sign up now and start
-              delivering parcels in no time.
+              Get started with a free account. Sign up now and start delivering
+              parcels in no time.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Link
