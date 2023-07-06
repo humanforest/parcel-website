@@ -10,9 +10,9 @@ import {
 import { buttonVariants } from "@/components/ui/button"
 
 const hero = {
-  heading: "Earn at least £5.75 per delivery",
+  heading: "Earn at least £6.10 per delivery",
   description:
-    "Deliver parcels with HumanForest and get paid £5.75 per delivery + £1.70 per km while using a HumanForest eBike or eMoped.",
+    "Deliver parcels with HumanForest and get paid £6.10 per delivery + £1.55 per km while using a HumanForest eBike or eMoped.",
 }
 
 const signup = {
@@ -51,7 +51,7 @@ const primaryFeatures = [
 const secondaryFeatures = [
   {
     name: "Competitive pay.",
-    description: "£5.75 per delivery + £1.70 per km (after 4km).",
+    description: "£6.10 per delivery + £1.55 per km (after 4km).",
     icon: CloudArrowUpIcon,
   },
   {
