@@ -19,7 +19,7 @@ interface MainNavProps {
 
 export function MainNav({ items }: MainNavProps) {
   return (
-    <Disclosure as="nav" className="bg-white shadow">
+    <Disclosure as="nav" className="bg-forest-800 shadow">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -27,9 +27,10 @@ export function MainNav({ items }: MainNavProps) {
               <div className="flex">
                 <div className="flex shrink-0 items-center">
                   <Link href="/" className="flex items-center space-x-2">
-                    <Icons.logo className="h-6 w-6" />
-                    <span className="inline-block font-bold">
-                      {siteConfig.name}
+                    
+                    <span className="inline-block font-bold text-forest-100">
+                      Forest
+                      <span className="text-forest-200">Parcel</span>
                     </span>
                   </Link>
                 </div>
@@ -42,10 +43,10 @@ export function MainNav({ items }: MainNavProps) {
                             <Link
                               key={index}
                               href={item.href}
-                              className={buttonVariants({
+                              className={`text-forest-100 ${buttonVariants({
                                 variant: "ghost",
                                 rounded: "lg",
-                              })}
+                              })}`}
                             >
                               {item.title}
                             </Link>
@@ -54,6 +55,22 @@ export function MainNav({ items }: MainNavProps) {
                     </nav>
                   ) : null}
                 </div>
+              </div>
+
+                {/* Add the two buttons on the right side */}
+                <div className="ml-auto flex space-x-4">
+                <Link
+            href="/application"
+            className={buttonVariants({ variant: "primary", size: "sm" })}
+          >
+            Sign In
+          </Link>
+          <Link
+            href="/application"
+            className={buttonVariants({ variant: "primary", size: "sm" })}
+          >
+            Start Your Delivery
+          </Link>
               </div>
 
               <div className="-mr-2 flex items-center sm:hidden">
