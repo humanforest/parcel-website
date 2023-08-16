@@ -59,10 +59,10 @@ export default function Page() {
         <p className="mt-6 text-lg leading-8 text-gray-100">
           Ride with HumanForest and deliver parcels the smart way.
         </p>
-        <div className="mt-10 flex items-center gap-x-6 drop-shadow-xl">
+        <div className="mt-10 flex items-center gap-x-6">
           <Link
             href="/application"
-            className={buttonVariants({ variant: "primary", size: "xl" })}
+            className={buttonVariants({ variant: "primary", size: "xl",  className: "text-lg pl-8 pr-8"})}
           >
             Apply Now
           </Link>
@@ -73,11 +73,30 @@ export default function Page() {
   <div className="w-2/3 aspect-square overflow-hidden border-4 border-forest-900 rounded-full ">
     <img
       className="w-full h-full object-none"
-      src="https://www.moveelectric.com/sites/default/files/styles/article/public/2023-02/HumanForest%20press%20image%205.jpg?itok=MdEITtlW"
+      src="https://smarttransportpub.blob.core.windows.net/web/1/root/humanforest-pr-image-june-2022-2.jpg"
       alt=""
     />
+    <div
+                className="absolute w-[25%] h-[25%] top-12 left-25"
+                style={{
+                  backgroundImage: `url("/Images/Layer_1.png")`,
+                  backgroundSize: 'contain',
+                  backgroundRepeat: 'no-repeat',
+                  
+                }}
+              />
+              <div 
+  className="absolute w-[25%] h-[25%] bottom-20 right-20"
+  style={{
+    backgroundImage:`url("/Images/Frame_2470.png")`,
+    backgroundSize:'contain',
+    backgroundRepeat: 'no-repeat',
+  }}
+  />
   </div>
-</div>
+  
+  </div>
+
 
 
 
