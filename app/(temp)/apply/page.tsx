@@ -12,7 +12,7 @@ import { buttonVariants } from "@/components/ui/button"
 const hero = {
   heading: "Earn at least £6.10 per delivery",
   description:
-    "Deliver parcels with HumanForest and get paid £6.10 per delivery + £1.55 per km while using a HumanForest eBike or eMoped.",
+    "Deliver packages with Forest Parcel and get paid £1.25 per km and at least £6 per delivery.",
 }
 
 const signup = {
