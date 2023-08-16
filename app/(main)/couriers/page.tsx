@@ -70,9 +70,9 @@ export default function Page() {
       </div>
     </div>
     <div className="relative lg:col-span-5 lg:-mr-8 xl:absolute xl:inset-0 xl:left-1/2 xl:mr-0 flex justify-center items-center">
-  <div className="w-[60%] h-[60%] rounded-full overflow-hidden border-4 border-forest-900">
+  <div className="w-2/3 aspect-square overflow-hidden border-4 border-forest-900 rounded-full ">
     <img
-      className="w-full h-full object-cover rounded-full"
+      className="w-full h-full object-none"
       src="https://www.moveelectric.com/sites/default/files/styles/article/public/2023-02/HumanForest%20press%20image%205.jpg?itok=MdEITtlW"
       alt=""
     />

@@ -19,11 +19,11 @@ interface MainNavProps {
 
 export function MainNav({ items }: MainNavProps) {
   return (
-    <Disclosure as="nav" className="bg-forest-800 shadow">
+    <Disclosure as="nav" className="bg-forest-800">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="flex h-16 justify-between">
+            <div className="flex text-xl justify-between">
               <div className="flex">
                 <div className="flex shrink-0 items-center">
                   <Link href="/" className="flex items-center space-x-2">
@@ -34,19 +34,23 @@ export function MainNav({ items }: MainNavProps) {
                     </span>
                   </Link>
                 </div>
-                <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
+                <div className="hidden sm:ml-6 sm:flex sm:space-x-8 ">
                   {items?.length ? (
-                    <nav className="flex gap-6">
+                    <nav className="flex">
                       {items?.map(
                         (item, index) =>
                           item.href && (
                             <Link
                               key={index}
                               href={item.href}
-                              className={`text-forest-100 ${buttonVariants({
-                                variant: "ghost",
-                                rounded: "lg",
-                              })}`}
+                              className={buttonVariants({
+                                
+                                className: "text-forest-100 hover:text-forest-200 bg-forest-800 border-forest-800 hover:bg-forest-800",
+                                rounded: "full",
+                                size: "xl",
+
+                              })}
+                              
                             >
                               {item.title}
                             </Link>
@@ -55,23 +59,24 @@ export function MainNav({ items }: MainNavProps) {
                     </nav>
                   ) : null}
                 </div>
+                
               </div>
-
-                {/* Add the two buttons on the right side */}
-                <div className="ml-auto flex space-x-4">
+              <div className="flex space-x-4">
                 <Link
             href="/application"
-            className={buttonVariants({ variant: "primary", size: "sm" })}
+            className={buttonVariants({ variant: "primary", size: "xl" })}
           >
             Sign In
           </Link>
           <Link
             href="/application"
-            className={buttonVariants({ variant: "primary", size: "sm" })}
+            className={buttonVariants({ size: "xl", className: "bg-wood-50 text-wood-900 hover:bg-sky-100" })}
           >
             Start Your Delivery
           </Link>
               </div>
+                
+                
 
               <div className="-mr-2 flex items-center sm:hidden">
                 {/* Mobile menu button */}
