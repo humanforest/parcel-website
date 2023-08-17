@@ -47,41 +47,80 @@ Your daily earnings will be visible, and fees are paid on a weekly basis. Furthe
 export default function Page() {
   return (
     <div className="bg-white">
-      <div className="relative bg-forest-700">
-        <div className="mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8">
-          <div className="px-6 pb-24 pt-10 sm:pb-32 lg:col-span-7 lg:px-0 lg:pb-56 lg:pt-48 xl:col-span-6">
-            <div className="mx-auto max-w-2xl lg:mx-0">
-
-              <h1 className="mt-24 text-4xl font-bold tracking-tight text-white sm:mt-10 sm:text-6xl">
-
-                Boost your delivery.
-                <br />
-                Start using our app today.
-              </h1>
-              <p className="mt-6 text-lg leading-8 text-gray-100">
-
-                Ride with HumanForest and deliver parcels the smart way.
-
-              </p>
-              <div className="mt-10 flex items-center gap-x-6 drop-shadow-xl">
-                <Link
-                  href="/application"
-                  className={buttonVariants({ variant: "primary", size: "xl" })}
-                >
-                  Sign Up
-                </Link>
+      <div className="relative bg-forest-800">
+  <div className="mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8">
+    {/* Images */}
+  <div className="relative order-2 lg:order-1 lg:col-span-5 lg:-mr-8 xl:absolute xl:inset-0 xl:left-1/2 xl:mr-0 flex justify-center items-center">
+  <div className="w-2/3 aspect-square overflow-hidden border-4 border-forest-900 rounded-full ">
+    <img
+      className="w-full h-full object-none"
+      src="https://smarttransportpub.blob.core.windows.net/web/1/root/humanforest-pr-image-june-2022-2.jpg"
+      alt=""
+    />
+    <div className="absolute w-[25%] h-[25%] top-12 left-25 z-10">
+    <div
+                className="bg-contain bg-no-repeat bg-center"
+                style={{
+                  backgroundImage: `url("/Images/Layer_1.png")`,
+                  width: '100%',
+                  paddingBottom: '100%',
+                  
+                }}
+              />
               </div>
-            </div>
-          </div>
-          <div className="relative lg:col-span-5 lg:-mr-8 xl:absolute xl:inset-0 xl:left-1/2 xl:mr-0">
-            <img
-              className="aspect-[4/3] w-full bg-gray-50 object-cover lg:absolute lg:inset-0 lg:aspect-auto lg:h-full"
-              src="https://www.moveelectric.com/sites/default/files/styles/article/public/2023-02/HumanForest%20press%20image%205.jpg?itok=MdEITtlW"
-              alt=""
-            />
-          </div>
+              <div>
+                <div className="absolute w-[25%] h-[25%] bottom-8 right-24 z-10">
+                  <div
+  className="bg-contain bg-no-repeat bg-center"
+  style={{
+    backgroundImage:`url("/Images/Frame_2470.png")`,
+    width: '100%',
+    paddingBottom: '100%',
+  }}
+  />
+  </div>
+  <div className="absolute w-[15%] h-[15%] right-64  bottom-16 z-9">
+    <div
+  className="bg-contain bg-no-repeat bg-center"
+  style={{
+    backgroundImage:`url("/Images/Vector_140.png")`,
+    width: '100%',
+    paddingBottom: '100%',
+  }}
+  />
+  </div>
+  </div>
+  </div>
+  
+  </div>
+{/* Text */}
+    <div className="px-6 pb-24 pt-10 order-1 lg:order-2 sm:pb-32 lg:col-span-7 lg:px-0 lg:pb-56 lg:pt-48 xl:col-span-6">
+      <div className="mx-auto max-w-2xl lg:mx-0">
+        <h1 className="mt-24 text-4xl font-bold tracking-tight text-white sm:mt-10 sm:text-6xl">
+          Boost your delivery.
+          <br />
+          Start using our app today.
+        </h1>
+        <p className="mt-6 text-lg leading-8 text-gray-100">
+          Ride with HumanForest and deliver parcels the smart way.
+        </p>
+        <div className="mt-10 flex items-center gap-x-6">
+          <Link
+            href="/application"
+            className={buttonVariants({ variant: "primary", size: "xl",  className: "text-lg pl-8 pr-8"})}
+          >
+            Apply Now
+          </Link>
         </div>
       </div>
+    </div>
+    
+
+
+
+  </div>
+</div>
+
 
       {/* Benefits Section */}
 
@@ -277,7 +316,7 @@ export default function Page() {
       <>
 
 
-        <ScrollBanner />
+       
       </>
     </div>
   )
