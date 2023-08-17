@@ -45,7 +45,7 @@ export function MainNav({ items }: MainNavProps) {
                               href={item.href}
                               className={buttonVariants({
                                 
-                                className: "text-forest-100 hover:text-forest-200 bg-forest-800 border-forest-800 hover:bg-forest-800",
+                                className: "text-forest-100 hover:text-forest-200 bg-forest-800 border-0 hover:bg-forest-800",
                                 rounded: "full",
                                 size: "xl",
 
@@ -61,7 +61,7 @@ export function MainNav({ items }: MainNavProps) {
                 </div>
                 
               </div>
-              <div className="flex space-x-4">
+              <div className="hidden lg:flex space-x-4">
                 <Link
             href="/application"
             className={buttonVariants({ variant: "primary", size: "xl" })}
