@@ -50,19 +50,20 @@ export default function Page() {
       <div className="relative bg-forest-800">
   <div className="mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8">
     {/* Images */}
-  <div className="relative order-2 lg:order-1 lg:col-span-5 lg:-mr-8 xl:absolute xl:inset-0 xl:left-1/2 xl:mr-0 flex justify-center items-center">
-  <div className="w-2/3 aspect-square overflow-hidden border-4 border-forest-900 rounded-full ">
+  <div className="absolute order-2 lg:order-1 lg:col-span-5 lg:-mr-8 lg:absolute lg:inset-0 lg:left-1/2 lg:mr-0 ">
+  <div className="relative w-[70%] aspect-square rounded-full justify-items-center ">
     <img
-      className="w-full h-full object-none"
-      src="https://smarttransportpub.blob.core.windows.net/web/1/root/humanforest-pr-image-june-2022-2.jpg"
-      alt=""
+      className="w-full h-full bg-contain bg-no-repeat bg-center"
+      style={{
+        backgroundImage: `url("Images/Ellipse_1.png")`,
+      }}
     />
     <div className="absolute w-[25%] h-[25%] top-12 left-25 z-10">
     <div
                 className="bg-contain bg-no-repeat bg-center"
                 style={{
                   backgroundImage: `url("/Images/Layer_1.png")`,
-                  width: '100%',
+                  width: '70%',
                   paddingBottom: '100%',
                   
                 }}
@@ -74,7 +75,7 @@ export default function Page() {
   className="bg-contain bg-no-repeat bg-center"
   style={{
     backgroundImage:`url("/Images/Frame_2470.png")`,
-    width: '100%',
+    width: '70%',
     paddingBottom: '100%',
   }}
   />
@@ -84,7 +85,7 @@ export default function Page() {
   className="bg-contain bg-no-repeat bg-center"
   style={{
     backgroundImage:`url("/Images/Vector_140.png")`,
-    width: '100%',
+    width: '70%',
     paddingBottom: '100%',
   }}
   />
@@ -93,8 +94,10 @@ export default function Page() {
   </div>
   
   </div>
+
+  
 {/* Text */}
-    <div className="px-6 pb-24 pt-10 order-1 lg:order-2 sm:pb-32 lg:col-span-7 lg:px-0 lg:pb-56 lg:pt-48 xl:col-span-6">
+    <div className="flex px-6 pb-24 pt-10 order-1 lg:order-2 sm:pb-32 lg:col-span-7 lg:px-0 lg:pb-56 lg:pt-48 xl:col-span-6">
       <div className="mx-auto max-w-2xl lg:mx-0">
         <h1 className="mt-24 text-4xl font-bold tracking-tight text-white sm:mt-10 sm:text-6xl">
           Boost your delivery.
@@ -121,12 +124,84 @@ export default function Page() {
   </div>
 </div>
 
+{/* Hero 2 */}
+
+<div className="relative bg-white">
+  <div className="mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8">
+    {/* Images */}
+  <div className="lg:col-span-5 lg:pl-8 xl:inset-0 xl:right-1/2 xl:mr-0 flex justify-center items-center">
+  <div className="relative w-full aspect-square overflow-hidden rounded-full ">
+    <img
+      className="w-full h-full bg-contain bg-no-repeat bg-center"
+      style={{
+        backgroundImage: `url("/Images/JoeMoped.png")`,
+      }}
+    />
+    <div className="absolute w-[25%] h-[25%] top-12 right-20 z-10">
+    <div
+                className="bg-contain bg-no-repeat bg-center"
+                style={{
+                  backgroundImage: `url("/Images/Star_1.png")`,
+                  width: '60%',
+                  paddingBottom: '100%',
+                  
+                }}
+              />
+              </div>
+              
+                <div className="absolute w-[25%] h-[25%] bottom-24 left-48 z-10">
+                  <div
+  className="bg-contain bg-no-repeat bg-center"
+  style={{
+    backgroundImage:`url("/Images/CuteTree.png")`,
+    width: '60%',
+    paddingBottom: '100%',
+  }}
+  />
+  </div>
+  
+  </div>
+  
+  </div>
+
+  
+{/* Text */}
+    <div className=" px-6 pb-24 pt-10  sm:pb-32 lg:col-span-7 lg:px-0 lg:pb-56 lg:pl-8 lg:pt-48 xl:col-span-6">
+      <div className="mx-auto max-w-2xl lg:mx-0">
+        <h1 className="mt-24 text-4xl font-bold tracking-tight text-wood-900 sm:mt-10 sm:text-6xl">
+          eMopeds are here!
+        
+        </h1>
+        <p className="mt-6 text-lg leading-8 text-wood-700">
+          Deliver with speed and comfort.
+        </p>
+        <div className="mt-10 flex items-center gap-x-6">
+          <Link
+            href="/application"
+            className={buttonVariants({ variant: "primary", size: "xl",  className: "text-lg pl-8 pr-8"})}
+          >
+            Start Now!
+          </Link>
+        </div>
+      </div>
+    </div>
+    
+
+
+
+  </div>
+</div>
+
 
       {/* Benefits Section */}
 
 
       <div className="bg-white py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          
+        <h1 className="text-4xl font-bold tracking-tight text-wood-900 justify-center pb-8 ">
+              Join Our Delivery Team Today
+            </h1>
           <div className="flex items-center justify-center gap-x-16">
             <div className="flex flex-col items-center">
               <svg
