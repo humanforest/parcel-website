@@ -34,7 +34,7 @@ export function MainNav({ items }: MainNavProps) {
                     </span>
                   </Link>
                 </div>
-                <div className="hidden sm:ml-6 sm:flex sm:space-x-8 ">
+                <div className="hidden sm:ml-6 sm:flex  sm:space-x-8 ">
                   {items?.length ? (
                     <nav className="flex">
                       {items?.map(
@@ -45,8 +45,8 @@ export function MainNav({ items }: MainNavProps) {
                               href={item.href}
                               className={buttonVariants({
                                 
-                                className: "text-forest-100 hover:text-forest-200 bg-forest-800 border-0 hover:bg-forest-800",
-                                rounded: "full",
+                                className: "text-forest-100 hover:text-forest-200 bg-forest-800 border-forest-800 hover:bg-forest-800",
+                                
                                 size: "xl",
 
                               })}

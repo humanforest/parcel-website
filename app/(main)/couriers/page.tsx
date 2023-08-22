@@ -51,7 +51,7 @@ export default function Page() {
   <div className="mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8">
     {/* Images */}
    
-  <div className=" lg:absolute order-2 lg:order-1 lg:col-span-5 lg:-mr-8 lg:inset-0 lg:left-1/2 lg:mr-0 flex items-center justify-center">
+  <div className=" lg:absolute order-2 lg:order-1 lg:col-span-5 lg:-mr-8 lg:inset-0 lg:left-1/2 lg:mr-0 xs:pt-32 flex items-center justify-center">
   <div className="relative w-96  h-96 aspect-square rounded-full">
     <img
       className="w-full h-full bg-contain bg-no-repeat bg-center rounded-full"
@@ -99,7 +99,7 @@ export default function Page() {
 
   
 {/* Text */}
-    <div className="flex px-6 pb-24 pt-10 order-1 lg:order-2 sm:pb-32 lg:col-span-7 lg:px-0 lg:pb-56 lg:pt-48 xl:col-span-6">
+    <div className="flex px-6 pb-24 pt-10 order-1 lg:order-2 sm:pb-32 lg:col-span-7 lg:px-0 lg:pb-64 lg:pt-64 xl:col-span-6">
       <div className="mx-auto max-w-2xl lg:mx-0">
         <h1 className="mt-24 text-4xl font-bold tracking-tight text-white sm:mt-10 sm:text-6xl">
           Boost your delivery.
@@ -367,6 +367,10 @@ export default function Page() {
         </div>
       </div>
 
+      {/* Testimonials */}
+
+      
+
       {/* FAQ */}
 
       <div className="bg-autumn-100">
@@ -394,11 +398,13 @@ export default function Page() {
           </dl>
         </div>
       </div>
+      
       <>
 
 
        
       </>
     </div>
+    
   )
 }
