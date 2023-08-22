@@ -50,10 +50,11 @@ export default function Page() {
       <div className="relative bg-forest-800">
   <div className="mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8">
     {/* Images */}
-  <div className="absolute order-2 lg:order-1 lg:col-span-5 lg:-mr-8 lg:absolute lg:inset-0 lg:left-1/2 lg:mr-0 ">
-  <div className="relative w-[70%] aspect-square rounded-full justify-items-center ">
+   
+  <div className=" lg:absolute order-2 lg:order-1 lg:col-span-5 lg:-mr-8 lg:inset-0 lg:left-1/2 lg:mr-0 flex items-center justify-center">
+  <div className="relative w-96  h-96 aspect-square rounded-full">
     <img
-      className="w-full h-full bg-contain bg-no-repeat bg-center"
+      className="w-full h-full bg-contain bg-no-repeat bg-center rounded-full"
       style={{
         backgroundImage: `url("Images/Ellipse_1.png")`,
       }}
@@ -70,7 +71,7 @@ export default function Page() {
               />
               </div>
               <div>
-                <div className="absolute w-[25%] h-[25%] bottom-8 right-24 z-10">
+                <div className="absolute w-[40%] h-[40%] -bottom-12 -right-8 z-10">
                   <div
   className="bg-contain bg-no-repeat bg-center"
   style={{
@@ -80,7 +81,7 @@ export default function Page() {
   }}
   />
   </div>
-  <div className="absolute w-[15%] h-[15%] right-64  bottom-16 z-9">
+  <div className="absolute w-[40%] h-[40%] right-0  -bottom-8 z-9">
     <div
   className="bg-contain bg-no-repeat bg-center"
   style={{
@@ -94,6 +95,7 @@ export default function Page() {
   </div>
   
   </div>
+  
 
   
 {/* Text */}
@@ -130,7 +132,7 @@ export default function Page() {
   <div className="mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8">
     {/* Images */}
   <div className="lg:col-span-5 lg:pl-8 xl:inset-0 xl:right-1/2 xl:mr-0 flex justify-center items-center">
-  <div className="relative w-full aspect-square overflow-hidden rounded-full ">
+  <div className="relative w-96 h-96 aspect-square overflow-hidden rounded-full ">
     <img
       className="w-full h-full bg-contain bg-no-repeat bg-center"
       style={{
@@ -198,12 +200,16 @@ export default function Page() {
 
       <div className="bg-white py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          
-        <h1 className="text-4xl font-bold tracking-tight text-wood-900 justify-center pb-8 ">
+          <div className="text-center">
+        <h1 className="text-4xl font-bold tracking-tight text-wood-900 justify-center ">
               Join Our Delivery Team Today
             </h1>
-          <div className="flex items-center justify-center gap-x-16">
-            <div className="flex flex-col items-center">
+            <p className="mt-6 text-lg leading-8 text-wood-700 pb-12">
+         Join us today and start enjoying the perks of being a valued member of our delivery network.
+        </p>
+        </div>
+          <div className="flex items-center justify-center gap-x-10">
+            <div className="flex flex-col items-center border-2 border-forest-900 rounded-lg p-6 w-72">
               <svg
                 width="32"
                 height="33"
@@ -233,7 +239,7 @@ export default function Page() {
               <p className="text-center">Every ride you do saves on CO2</p>
             </div>
 
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center border-2 border-forest-900 rounded-lg p-6 w-72">
               <div>
                 <div className="text-center">
                   <svg
@@ -255,7 +261,7 @@ export default function Page() {
                 <p className="text-center">Reach speeds of up to 25km/h</p>
               </div>
             </div>
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center border-2 border-forest-900 rounded-lg p-6 w-72">
               <div>
                 <div className="text-center">
                   <svg
