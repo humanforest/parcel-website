@@ -208,6 +208,7 @@ export default function Page() {
          Join us today and start enjoying the perks of being a valued member of our delivery network.
         </p>
         </div>
+        <div id="slider" className="w-full h-full scroll whitespace-nowrap scroll-smooth overflow-x-auto">
           <div className="flex items-center justify-center gap-x-10">
             <div className="flex flex-col items-center border-2 border-forest-900 rounded-lg p-6 w-72">
               <svg
@@ -364,12 +365,171 @@ export default function Page() {
               </div>
             </div>
           </div>
+          </div>
         </div>
       </div>
 
       {/* Testimonials */}
 
-      
+      <div className="relative bg-forest-800 ">
+      <div className="text-center p-12">
+      <h1 className="text-4xl font-bold tracking-tight text-wood-0 items-center justify-center">
+              Testimonials
+            </h1>
+          
+        </div>
+      <div className="relative flex items-center justify-center mx-auto text-center pb-12">
+     
+        
+        <div id="slider" className="w-full h-full scroll whitespace-nowrap scroll-smooth">
+        
+      <img
+      className="w-[220px] inline-block p-2 hover:scale-105 ease-in-out duration-300"
+      src="/Images/JoeMoped.png"
+      alt="/"
+    />
+    <div className="relative w-[340px] aspect-square inline-block p-2 hover:scale-105 ease-in-out duration-300">
+    <img
+      className="w-[340px] inline-block p-2"
+      src="/Images/JoeMoped.png"
+      alt="/"
+    />
+     <div className="absolute w-full -top-32 left-0 z-10">
+    <div
+                className="bg-contain bg-no-repeat bg-center"
+                style={{
+                  backgroundImage: `url("/Images/Lynn.png")`,
+                  width: '60%',
+                  paddingBottom: '100%',
+                  
+                }}
+              />
+              </div>
+              <div className="absolute w-[30%] h-[30%] left-12  top-8 z-9">
+    <div
+  className="bg-contain bg-no-repeat bg-center"
+  style={{
+    backgroundImage:`url("/Images/Vector_141.png")`,
+    width: '70%',
+    paddingBottom: '100%',
+  }}
+  />
+  </div>
+              
+                <div className="absolute w-full -bottom-32 left-16 z-10">
+                  <div
+  className="bg-contain bg-no-repeat bg-center"
+  style={{
+    backgroundImage:`url("/Images/BoxFrame.png")`,
+    width: '60%',
+    paddingBottom: '100%',
+  }}
+  />
+  </div>
+
+    </div>
+    <img
+      className="w-[220px] inline-block p-2 hover:scale-105 ease-in-out duration-300"
+      src="/Images/JoeMoped.png"
+      alt="/"
+    />
+    
+      </div>
+      </div>
+      </div>
+{/* eBikes */}
+      <div className="relative bg-white">
+  <div className="mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8">
+    {/* Images */}
+   
+  <div className=" lg:absolute order-2 lg:order-1 lg:col-span-5 lg:-mr-8 lg:inset-0 lg:left-1/2 lg:mr-0 xs:pt-32 flex items-center justify-center">
+  <div className="relative w-96  h-96 aspect-square rounded-full xs:pt-4">
+    <img
+      className="w-full h-full bg-contain bg-no-repeat bg-center rounded-full"
+      style={{
+        backgroundImage: `url("Images/eBike.png")`,
+      }}
+    />
+    <div className="absolute w-[35%] h-[35%] top-0 left-25 z-10">
+    <div
+                className="bg-contain bg-no-repeat bg-center"
+                style={{
+                  backgroundImage: `url("/Images/Frame_2470.png")`,
+                  width: '70%',
+                  paddingBottom: '100%',
+                  
+                }}
+              />
+              </div>
+              <div>
+                <div className="absolute w-[70%] h-[70%] -bottom-20 -right-24 z-10">
+                  <div
+  className="bg-contain bg-no-repeat bg-center"
+  style={{
+    backgroundImage:`url("/Images/Rectangle.png")`,
+    width: '70%',
+    paddingBottom: '100%',
+    
+  }}
+  />
+  </div>
+  
+  </div>
+  </div>
+  
+  </div>
+  
+
+  
+{/* Text */}
+    <div className="flex px-6 pb-24 pt-10 order-1 lg:order-2 sm:pb-32 lg:col-span-7 lg:px-0 lg:pb-64 lg:pt-64 xl:col-span-6">
+      <div className="mx-auto max-w-2xl lg:mx-0">
+        <h1 className="text-4xl font-bold tracking-tight text-wood-900 sm:mt-10 sm:text-6xl">
+          No Bike? No Problem.
+        </h1>
+        <p className="mt-6 text-lg leading-8 text-wood-700">
+          The best way to move around the city. Our whole fleet is electric and we are committed to reducing emissions in our cities.
+        </p>
+        <div className="flex  gap-2 mt-4">
+            <div className="flex flex-col border-2 border-forest-900 rounded-lg p-4 ">
+              
+
+              <h2 className="mt-2 font-bold">3,000+</h2>
+              <p>Electric Bikes</p>
+            </div>
+
+            <div className="flex flex-col border-2 border-forest-900 rounded-lg p-4 ">
+              
+                
+
+                <h2 className="mt-2 font-bold">200+</h2>
+                <p>Electric Mopeds</p>
+              
+            </div>
+            <div className="flex flex-col border-2 border-forest-900 rounded-lg p-4 ">
+              
+
+                <h2 className="mt-2 font-bold">Up to 50%</h2>
+                <p>Discount in minute bundles</p>
+              
+            </div>
+          </div>
+        <div className="mt-10 flex items-center gap-x-6">
+          <Link
+            href="/application"
+            className={buttonVariants({ variant: "primary", size: "xl",  className: "text-lg pl-8 pr-8"})}
+          >
+            Apply Now!
+          </Link>
+        </div>
+      </div>
+    </div>
+    
+
+
+
+  </div>
+</div>
 
       {/* FAQ */}
 
