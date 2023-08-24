@@ -70,7 +70,7 @@ export function MainNav({ items }: MainNavProps) {
           </Link>
           <Link
             href="/application"
-            className={buttonVariants({ size: "xl", className: "bg-wood-50 text-wood-900 hover:bg-sky-100" })}
+            className={buttonVariants({ size: "xl", className: "border-b-4 bg-wood-50 text-wood-900 hover:bg-sky-100" })}
           >
             Start Your Delivery
           </Link>

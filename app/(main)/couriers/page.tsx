@@ -12,38 +12,33 @@ export const metadata = {
 const faqs = [
   {
     id: 1,
-    question: "What are the requirements for being a rider?",
-    answer: ` General requirements:
-   
-    · Age: +18 for e-Bike riders or +21 for e-Moped riders.
-    · HumanForest user account.
-    · Equipment: You must have your own helmet and backpack (minimum size: 35cm x 26cm x       35cm).
-    · Smartphone.
-    · UK bank account.
-    
- Documentation:
-
-    · Proof of ID.
-    · Proof of address: You can provide a driving licence, bank statement, or utilities bill.
-    · Right to work in the UK: Provide a passport, visa, or immigration status document.`
+    question: "Requirements?",
+    answer: [
+      " 18+ years old",
+      " HumanForest user account. Download Here",
+      " Smartphone",
+      " UK bank account"
+    ]
   },
   {
     id: 2,
-    question: "What vehicles are available for delivering Parcels?",
-    answer: `When delivering with HumanForest Parcel, it is mandatory to exclusively use our eBike or eMoped fleet.  We're all about eco-friendly delivery here, so we don't permit the use of cars or personal bikes and mopeds. 
-    
-Your commitment to our sustainable approach is greatly appreciated!`
+    question: "Documents",
+    answer: [
+      " ID",
+      " Proof of address (i.e. Driving licence, bank statement, utility bill)",
+      " Right to work in the UK (Passport/Visa/birth certificate)"
+    ]
   },
   {
     id: 3,
-    question: "How much do I get paid?",
-    answer: `When you complete a delivery, you will receive payment based on factors such as distance and other variables. Before accepting a job, we will always provide you with the exact amount you will earn. 
-For each delivery, you are guaranteed a minimum pay of £5.7, regardless of the distance. In addition, you will earn £2 per extra kilometre covered. This payment structure applies to both bikes and e-mopeds. 
-    
-Your daily earnings will be visible, and fees are paid on a weekly basis. Furthermore, as a rider, you will receive 100% of any tips you receive, which are currently provided in cash.`
+    question: "eMoped drivers also need",
+    answer: [
+      " Driving licence",
+      " CBT certificate",
+      " Personal SD&P"
+    ]
   },
-
-]
+];
 export default function Page() {
   return (
     <div className="bg-white">
@@ -112,7 +107,7 @@ export default function Page() {
         <div className="mt-10 flex items-center gap-x-6">
           <Link
             href="/application"
-            className={buttonVariants({ variant: "primary", size: "xl",  className: "text-lg pl-8 pr-8"})}
+            className={buttonVariants({ variant: "primary", size: "xl",  className: "border-b-4 text-lg pl-8 pr-8"})}
           >
             Apply Now
           </Link>
@@ -132,14 +127,14 @@ export default function Page() {
   <div className="mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8">
     {/* Images */}
   <div className="lg:col-span-5 lg:pl-8 xl:inset-0 xl:right-1/2 xl:mr-0 flex justify-center items-center">
-  <div className="relative w-96 h-96 aspect-square overflow-hidden rounded-full ">
+  <div className="relative w-96 h-96 aspect-square">
     <img
-      className="w-full h-full bg-contain bg-no-repeat bg-center"
+      className="w-full h-full bg-contain bg-no-repeat bg-center rounded-full"
       style={{
         backgroundImage: `url("/Images/JoeMoped.png")`,
       }}
     />
-    <div className="absolute w-[25%] h-[25%] top-12 right-20 z-10">
+    <div className="absolute w-[40%] h-[40%] -top-8 -right-4 z-10">
     <div
                 className="bg-contain bg-no-repeat bg-center"
                 style={{
@@ -151,7 +146,7 @@ export default function Page() {
               />
               </div>
               
-                <div className="absolute w-[25%] h-[25%] bottom-24 left-48 z-10">
+                <div className="absolute w-[45%] h-[45%] bottom-0 left-0 z-10">
                   <div
   className="bg-contain bg-no-repeat bg-center"
   style={{
@@ -170,6 +165,10 @@ export default function Page() {
 {/* Text */}
     <div className=" px-6 pb-24 pt-10  sm:pb-32 lg:col-span-7 lg:px-0 lg:pb-56 lg:pl-8 lg:pt-48 xl:col-span-6">
       <div className="mx-auto max-w-2xl lg:mx-0">
+        <div className="flex col-span-2">
+        <h3 className="font-bold  text-forest-500 border-4 border-forest-100 rounded-full bg-forest-100">eMopeds</h3>
+   </div>
+        
         <h1 className="mt-24 text-4xl font-bold tracking-tight text-wood-900 sm:mt-10 sm:text-6xl">
           eMopeds are here!
         
@@ -180,7 +179,7 @@ export default function Page() {
         <div className="mt-10 flex items-center gap-x-6">
           <Link
             href="/application"
-            className={buttonVariants({ variant: "primary", size: "xl",  className: "text-lg pl-8 pr-8"})}
+            className={buttonVariants({ variant: "primary", size: "xl",  className: "border-b-4 text-lg pl-8 pr-8"})}
           >
             Start Now!
           </Link>
@@ -210,7 +209,7 @@ export default function Page() {
         </div>
         <div id="slider" className="w-full h-full scroll whitespace-nowrap scroll-smooth overflow-x-auto">
           <div className="flex items-center justify-center gap-x-10">
-            <div className="flex flex-col items-center border-2 border-forest-900 rounded-lg p-6 w-72">
+            <div className="flex flex-col items-center border-2 border-forest-900 rounded-3xl p-6 w-72">
               <svg
                 width="32"
                 height="33"
@@ -240,7 +239,7 @@ export default function Page() {
               <p className="text-center">Every ride you do saves on CO2</p>
             </div>
 
-            <div className="flex flex-col items-center border-2 border-forest-900 rounded-lg p-6 w-72">
+            <div className="flex flex-col items-center border-2 border-forest-900 rounded-3xl p-6 w-72">
               <div>
                 <div className="text-center">
                   <svg
@@ -262,7 +261,7 @@ export default function Page() {
                 <p className="text-center">Reach speeds of up to 25km/h</p>
               </div>
             </div>
-            <div className="flex flex-col items-center border-2 border-forest-900 rounded-lg p-6 w-72">
+            <div className="flex flex-col items-center border-2 border-forest-900 rounded-3xl p-6 w-72">
               <div>
                 <div className="text-center">
                   <svg
@@ -440,8 +439,6 @@ export default function Page() {
 {/* eBikes */}
       <div className="relative bg-white">
   <div className="mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8">
-    {/* Images */}
-   
   <div className=" lg:absolute order-2 lg:order-1 lg:col-span-5 lg:-mr-8 lg:inset-0 lg:left-1/2 lg:mr-0 xs:pt-32 flex items-center justify-center">
   <div className="relative w-96  h-96 aspect-square rounded-full xs:pt-4">
     <img
@@ -484,6 +481,10 @@ export default function Page() {
 {/* Text */}
     <div className="flex px-6 pb-24 pt-10 order-1 lg:order-2 sm:pb-32 lg:col-span-7 lg:px-0 lg:pb-64 lg:pt-64 xl:col-span-6">
       <div className="mx-auto max-w-2xl lg:mx-0">
+     <div className="flex col-span-2">
+        <h3 className="font-bold  text-forest-500 border-4 border-forest-100 rounded-full bg-forest-100">eBikes</h3>
+   </div>
+        
         <h1 className="text-4xl font-bold tracking-tight text-wood-900 sm:mt-10 sm:text-6xl">
           No Bike? No Problem.
         </h1>
@@ -491,14 +492,14 @@ export default function Page() {
           The best way to move around the city. Our whole fleet is electric and we are committed to reducing emissions in our cities.
         </p>
         <div className="flex  gap-2 mt-4">
-            <div className="flex flex-col border-2 border-forest-900 rounded-lg p-4 ">
+            <div className="border-b-4 flex flex-col border-2 border-forest-900 bg-cassia-200 rounded-3xl p-4 ">
               
 
               <h2 className="mt-2 font-bold">3,000+</h2>
               <p>Electric Bikes</p>
             </div>
 
-            <div className="flex flex-col border-2 border-forest-900 rounded-lg p-4 ">
+            <div className="border-b-4  flex flex-col border-2 border-forest-900 rounded-3xl p-4 ">
               
                 
 
@@ -506,7 +507,7 @@ export default function Page() {
                 <p>Electric Mopeds</p>
               
             </div>
-            <div className="flex flex-col border-2 border-forest-900 rounded-lg p-4 ">
+            <div className="border-b-4 flex flex-col border-2 border-forest-900 rounded-3xl p-4 ">
               
 
                 <h2 className="mt-2 font-bold">Up to 50%</h2>
@@ -517,7 +518,7 @@ export default function Page() {
         <div className="mt-10 flex items-center gap-x-6">
           <Link
             href="/application"
-            className={buttonVariants({ variant: "primary", size: "xl",  className: "text-lg pl-8 pr-8"})}
+            className={buttonVariants({ variant: "primary", size: "xl",  className: "border-b-4 text-lg pl-8 pr-8"})}
           >
             Apply Now!
           </Link>
@@ -533,31 +534,49 @@ export default function Page() {
 
       {/* FAQ */}
 
-      <div className="bg-autumn-100">
-        <div className="mx-auto max-w-7xl divide-y divide-gray-900/10 px-6 py-24 sm:py-32 lg:px-8 lg:py-10">
+      <div className="bg-white border-2 border-b-4 border-forest-900 rounded-3xl">
+        <div className="mx-auto max-w-7xl divide-x divide-gray-900/10 px-6 py-24 sm:py-32 lg:px-8 lg:py-10">
 
-          <h2 className="text-2xl font-bold leading-10 tracking-tight text-gray-900">
+          <h1 className="text-lg text-center font-bold tracking-tight text-wood-900 sm:mt-10 sm:text-6xl">
             Frequently asked questions
-          </h2>
-          <dl className="mt-10 space-y-8 divide-y divide-gray-900/10">
-            {faqs.map((faq) => (
-              <div
-                key={faq.id}
-                className="pt-8 lg:grid lg:grid-cols-12 lg:gap-8"
-              >
-                <dt className="text-base font-semibold leading-7 text-gray-900 lg:col-span-5">
-                  {faq.question}
-                </dt>
-                <dd className="mt-4 lg:col-span-7 lg:mt-0">
-                  <p className="text-base leading-7 text-gray-600 whitespace-pre-line whitespace-break-spaces ...">
-                    {faq.answer}
-                  </p>
-                </dd>
-              </div>
+          </h1>
+          <p className="mt-6 text-lg text-center leading-8 text-wood-700">
+Be sure to have the following information ready:
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-8 mt-16">
+      {faqs.map((faq) => (
+        <div key={faq.id} className="p-4">
+          <h2 className="text-xl font-bold text-forest-900 mb-2">{faq.question}</h2>
+          <ul className="list-disc list-inside text-gray-700">
+            {faq.answer.map((point, index) => (
+              <li key={index} className="flex ">
+              <img src="/Images/check.png" alt="check" className="mr-2 h-4 w-4" />
+              {point}
+              </li>
             ))}
-          </dl>
+          </ul>
+        </div>
+      ))}
+    </div>
+    <div className="mt-10 flex justify-center gap-x-6">
+          <Link
+            href="/application"
+            className={buttonVariants({ variant: "primary", size: "xl",  className: "border-b-4 text-lg pl-8 pr-8"})}
+          >
+            Apply Now!
+          </Link>
+        </div>
+          
         </div>
       </div>
+
+{/* Footer */}
+
+      <div className="bg-forest-800 relative">
+        <div className="mx-auto max-w-7xl divide-x divide-gray-900/10 px-6 py-24 sm:py-32 lg:px-8 lg:py-10">
+          
+          </div>
+          </div>
       
       <>
 
