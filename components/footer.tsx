@@ -7,9 +7,9 @@ const navigation = [
 export default function Footer() {
   return (
     <footer className="bg-forest-800">
-      <div className="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
+      <div className="mx-auto max-w-full overflow-hidden px-6 py-12 sm:py-24 lg:px-8">
         <nav
-          className="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12"
+          className="-mb-6 columns-3 flex justify-center gap-x-4 sm:space-x-12"
           aria-label="Footer"
         >
           {navigation.map((item) => (

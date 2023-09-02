@@ -13,7 +13,11 @@ const faqs = [
     question: "Requirements?",
     answer: [
       " 18+ years old",
-      " HumanForest user account. Download Here",
+      " HumanForest user account. ",
+      <a href="https://example.com/download" className="text-forest-600">
+        Download Here
+      </a>,
+
       " Smartphone",
       " UK bank account",
     ],
@@ -37,18 +41,18 @@ export default function Page() {
   return (
     <div className="bg-white">
       <div className="relative bg-forest-800">
-        <div className="mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8">
+        <div className="mx-auto max-w-full lg:grid lg:grid-cols-12 sm:grid-cols-1 lg:gap-x-8 lg:px-28 lg:h-[657px] sm:h-[685px] px-6  top-24">
           {/* Images */}
 
-          <div className="lg:absolute order-2 lg:order-1 lg:col-span-5 lg:-mr-8 lg:inset-0 lg:left-1/2 lg:mr-0 xs:pt-32 flex items-center justify-center">
-            <div className="relative w-96  h-96 aspect-square rounded-full">
+          <div className="lg:absolute order-2 lg:order-1 lg:col-span-5 lg:-mr-8 lg:inset-0 lg:left-1/2 lg:mr-0 xs:pt-6 flex items-center justify-center">
+            <div className="relative lg:w-[529px]  lg:h-[529px] h-[317px] w-[317px]  aspect-square rounded-full">
               <img
                 className="w-full h-full bg-contain bg-no-repeat bg-center rounded-full"
                 style={{
                   backgroundImage: `url("Images/Ellipse_1.png")`,
                 }}
               />
-              <div className="absolute w-[25%] h-[25%] top-12 left-25 z-10">
+              <div className="absolute w-[35%] h-[35%] top-8 -left-8 z-10">
                 <div
                   className="bg-contain bg-no-repeat bg-center"
                   style={{
@@ -84,27 +88,51 @@ export default function Page() {
           </div>
 
           {/* Text */}
-          <div className="flex px-6 pb-24 pt-10 order-1 lg:order-2 sm:pb-32 lg:col-span-7 lg:px-0 lg:pb-64 lg:pt-64 xl:col-span-6">
-            <div className="mx-auto max-w-2xl lg:mx-0">
-              <h1 className="mt-24 text-4xl font-bold tracking-tight text-white sm:mt-10 sm:text-6xl">
+          <div className="flex sm:gap-10  order-1 lg:order-2 sm:pb-32 lg:col-span-7 lg:py-48 xl:col-span-6">
+            <div className="mx-auto lg:mx-0 pt-10">
+              <h1 className="lg:text-5xl text-2xl font-bold tracking-tight text-white  ">
                 Boost your delivery.
-                <br />
+              </h1>
+              <h1 className="lg:text-5xl text-2xl font-bold tracking-tight text-white lg:mt-4">
                 Start using our app today.
               </h1>
-              <p className="mt-6 text-lg leading-8 text-gray-100">
-                Ride with HumanForest and deliver parcels the smart way.
+              <p className="mt-6 text-lg text-gray-100">
+                Ride with Forest and deliver parcels the smart way.
               </p>
-              <div className="mt-10 flex items-center gap-x-6">
+              <div className="mt-10 mb-12 flex">
                 <Link
                   href="/application"
                   className={buttonVariants({
                     variant: "primary",
                     size: "xl",
-                    className: "border-b-4 text-lg pl-8 pr-8",
+                    className:
+                      "border-b-4 text-lg w-48 h-[60px] px-4 hidden lg:flex",
                   })}
                 >
                   Apply Now
                 </Link>
+                <div className="lg:hidden xs:flex">
+                  <Link
+                    href="/application"
+                    className={buttonVariants({
+                      size: "xl",
+                      className:
+                        "border-b-4 bg-wood-50 text-wood-900 hover:bg-sky-100 mr-4",
+                    })}
+                  >
+                    Start Your Delivery
+                  </Link>
+
+                  <Link
+                    href="/application"
+                    className={buttonVariants({
+                      variant: "primary",
+                      size: "xl",
+                    })}
+                  >
+                    Sign In
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
@@ -114,17 +142,17 @@ export default function Page() {
       {/* Hero 2 */}
 
       <div className="relative bg-white">
-        <div className="mx-auto max-w-6xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8">
+        <div className="mx-auto max-w-full grid lg:grid-cols-12 lg:gap-x-8 lg:px-28 mt-16">
           {/* Images */}
           <div className="lg:col-span-5 lg:pl-8 xl:inset-0 xl:right-1/2 xl:mr-0 flex justify-center items-center">
-            <div className="relative w-96 h-96 aspect-square">
+            <div className="relative lg:w-[529px] w-[317px]  lg:h-[529px] h-[317px] aspect-square">
               <img
                 className="w-full h-full bg-contain bg-no-repeat bg-center rounded-full"
                 style={{
                   backgroundImage: `url("/Images/JoeMoped.png")`,
                 }}
               />
-              <div className="absolute w-[40%] h-[40%] -top-8 -right-4 z-10">
+              <div className="absolute w-[43%] h-[43%] lg:-top-14 lg:-right-4 -top-10 -right-8 z-10">
                 <div
                   className="bg-contain bg-no-repeat bg-center"
                   style={{
@@ -133,6 +161,12 @@ export default function Page() {
                     paddingBottom: "100%",
                   }}
                 />
+                <div className="relative">
+                  <div className="absolute text-center lg:-top-[145px] lg:right-[120px] -top-[86px] right-[68px] text-white font-bold text-sm lg:text-xl -rotate-12">
+                    More <br />
+                    Comfort
+                  </div>
+                </div>
               </div>
 
               <div className="absolute w-[45%] h-[45%] bottom-0 left-0 z-10">
@@ -149,18 +183,18 @@ export default function Page() {
           </div>
 
           {/* Text */}
-          <div className=" px-6 pb-24 pt-10  sm:pb-32 lg:col-span-7 lg:px-0 lg:pb-56 lg:pl-8 lg:pt-48 xl:col-span-6">
+          <div className=" px-6 mb-12 pt-10  sm:pb-32 lg:col-span-7 lg:px-0 lg:pb-56 lg:pl-8 lg:pt-48 xl:col-span-6">
             <div className="mx-auto max-w-2xl lg:mx-0">
               <div className="flex col-span-2">
-                <h3 className="font-bold  text-forest-500 border-4 border-forest-100 rounded-full bg-forest-100">
+                <h3 className="font-bold px-2 text-forest-500 border-4 border-forest-100 rounded-full bg-forest-100">
                   eMopeds
                 </h3>
               </div>
 
-              <h1 className="mt-24 text-4xl font-bold tracking-tight text-wood-900 sm:mt-10 sm:text-6xl">
+              <h1 className="mt-4 text-3xl lg:text-5xl font-bold tracking-tight text-wood-900 sm:mt-10 sm:text-6xl">
                 eMopeds are here!
               </h1>
-              <p className="mt-6 text-lg leading-8 text-wood-700">
+              <p className="mt-4 text-lg leading-8 text-wood-700">
                 Deliver with speed and comfort.
               </p>
               <div className="mt-10 flex items-center gap-x-6">
@@ -169,7 +203,7 @@ export default function Page() {
                   className={buttonVariants({
                     variant: "primary",
                     size: "xl",
-                    className: "border-b-4 text-lg pl-8 pr-8",
+                    className: "border-b-4 text-lg w-48 h-[60px] px-4",
                   })}
                 >
                   Start Now!
@@ -182,23 +216,23 @@ export default function Page() {
 
       {/* Benefits Section */}
 
-      <div className="bg-white py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="bg-white mt-16">
+        <div className="mx-auto max-w-full px-6 lg:px-28">
           <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-wood-900 justify-center ">
+            <h1 className="text-3xl lg:text-5xl  font-bold tracking-tight text-wood-900 justify-center ">
               Join Our Delivery Team Today
             </h1>
-            <p className="mt-6 text-lg leading-8 text-wood-700 pb-12">
+            <p className="mt-6 text-lg leading-8 text-wood-700 ">
               Join us today and start enjoying the perks of being a valued
               member of our delivery network.
             </p>
           </div>
           <div
             id="slider"
-            className="w-full h-full scroll whitespace-nowrap scroll-smooth overflow-x-auto"
+            className="w-full h-full scroll whitespace-nowrap scroll-smooth overflow-x-auto scroll-left"
           >
-            <div className="flex items-center justify-center gap-x-10">
-              <div className="flex flex-col items-center border-2 border-forest-900 rounded-3xl p-6 w-72">
+            <div className="flex lg:items-center lg:justify-center mt-16 mb-16 gap-x-10">
+              <div className="flex flex-col items-center border-2 border-forest-900 border-b-4 rounded-3xl p-6 w-72">
                 <svg
                   width="32"
                   height="33"
@@ -228,7 +262,7 @@ export default function Page() {
                 <p className="text-center">Every ride you do saves on CO2</p>
               </div>
 
-              <div className="flex flex-col items-center border-2 border-forest-900 rounded-3xl p-6 w-72">
+              <div className="flex flex-col items-center border-2 border-forest-900 border-b-4 rounded-3xl p-6 w-72">
                 <div>
                   <div className="text-center">
                     <svg
@@ -250,106 +284,37 @@ export default function Page() {
                   <p className="text-center">Reach speeds of up to 25km/h</p>
                 </div>
               </div>
-              <div className="flex flex-col items-center border-2 border-forest-900 rounded-3xl p-6 w-72">
+              <div className="flex flex-col items-center border-2 border-forest-900 border-b-4 rounded-3xl p-6 w-72">
                 <div>
                   <div className="text-center">
                     <svg
                       width="32"
                       height="33"
-                      viewBox="0 0 32 33"
+                      viewBox="0 0 25 28"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                       style={{ display: "inline-block" }}
                     >
-                      <g clip-path="url(#clip0_279_21)">
+                      <g clip-path="url(#clip0_343_528)">
                         <path
-                          d="M21.0983 18.0071C21.2616 17.7504 21.2733 17.4238 21.1333 17.1554L16.7816 8.45211C16.49 7.85711 15.51 7.85711 15.2183 8.45211L10.8666 17.1554C10.7266 17.4238 10.75 17.7504 10.9016 18.0071C11.065 18.2638 11.345 18.4271 11.6483 18.4271H11.975L10.8666 20.6438C10.7266 20.9121 10.75 21.2388 10.9016 21.4954C11.065 21.7521 11.345 21.9154 11.6483 21.9154H15.125V23.1288C15.125 23.6071 15.5216 24.0038 16 24.0038C16.4783 24.0038 16.875 23.6071 16.875 23.1288V21.9154H20.3516C20.655 21.9154 20.935 21.7638 21.0983 21.4954C21.2616 21.2388 21.2733 20.9121 21.1333 20.6438L20.025 18.4271H20.3516C20.655 18.4271 20.935 18.2754 21.0983 18.0071ZM18.94 20.1538H13.06L14.81 16.6654H13.06L16 10.7854L18.94 16.6654H17.19L18.94 20.1538V20.1538Z"
-                          fill="#002A24"
-                        />
-                        <path
-                          d="M16 2C8.265 2 2 8.265 2 16C2 23.735 8.265 30 16 30C23.735 30 30 23.735 30 16C30 8.265 23.735 2 16 2ZM16 28.25C9.245 28.25 3.75 22.755 3.75 16C3.75 9.245 9.245 3.75 16 3.75C22.755 3.75 28.25 9.245 28.25 16C28.25 22.755 22.755 28.25 16 28.25Z"
-                          fill="#002A24"
-                        />
-                        <path
-                          d="M16 6.23479C16.455 6.23479 16.8284 5.86146 16.8284 5.40646C16.8284 4.95146 16.455 4.57812 16 4.57812C15.545 4.57812 15.1717 4.95146 15.1717 5.40646C15.1717 5.86146 15.545 6.23479 16 6.23479Z"
-                          fill="#002A24"
-                        />
-                        <path
-                          d="M16 27.4213C16.4575 27.4213 16.8284 27.0505 16.8284 26.593C16.8284 26.1355 16.4575 25.7646 16 25.7646C15.5425 25.7646 15.1717 26.1355 15.1717 26.593C15.1717 27.0505 15.5425 27.4213 16 27.4213Z"
-                          fill="#002A24"
-                        />
-                        <path
-                          d="M26.5933 15.1719C26.1383 15.1719 25.765 15.5452 25.765 16.0002C25.765 16.4552 26.1383 16.8285 26.5933 16.8285C27.0483 16.8285 27.4217 16.4552 27.4217 16.0002C27.4217 15.5452 27.0483 15.1719 26.5933 15.1719Z"
-                          fill="#002A24"
-                        />
-                        <path
-                          d="M5.40664 16.8285C5.86412 16.8285 6.23497 16.4577 6.23497 16.0002C6.23497 15.5427 5.86412 15.1719 5.40664 15.1719C4.94917 15.1719 4.57831 15.5427 4.57831 16.0002C4.57831 16.4577 4.94917 16.8285 5.40664 16.8285Z"
-                          fill="#002A24"
-                        />
-                        <path
-                          d="M22.9067 7.92664C22.58 8.25331 22.58 8.76664 22.9067 9.09331C23.2333 9.41997 23.7467 9.41997 24.0733 9.09331C24.4 8.76664 24.4 8.25331 24.0733 7.92664C23.7467 7.59997 23.2333 7.59997 22.9067 7.92664Z"
-                          fill="#002A24"
-                        />
-                        <path
-                          d="M7.92664 22.9071C7.59997 23.2338 7.59997 23.7471 7.92664 24.0738C8.25331 24.4004 8.76664 24.4004 9.09331 24.0738C9.41997 23.7471 9.41997 23.2338 9.09331 22.9071C8.76664 22.5804 8.25331 22.5804 7.92664 22.9071Z"
-                          fill="#002A24"
-                        />
-                        <path
-                          d="M22.9067 22.9071C22.58 23.2338 22.58 23.7471 22.9067 24.0738C23.2333 24.4004 23.7467 24.4004 24.0733 24.0738C24.4 23.7471 24.4 23.2338 24.0733 22.9071C23.7467 22.5804 23.2333 22.5804 22.9067 22.9071Z"
-                          fill="#002A24"
-                        />
-                        <path
-                          d="M8.50997 9.33831C8.96745 9.33831 9.33831 8.96745 9.33831 8.50997C9.33831 8.0525 8.96745 7.68164 8.50997 7.68164C8.0525 7.68164 7.68164 8.0525 7.68164 8.50997C7.68164 8.96745 8.0525 9.33831 8.50997 9.33831Z"
-                          fill="#002A24"
-                        />
-                        <path
-                          d="M19.5933 6.92307C20.0133 7.0864 20.4917 6.88807 20.6667 6.4564C20.83 6.0364 20.6317 5.55807 20.2 5.38307C19.78 5.21974 19.3017 5.41807 19.1267 5.84974C18.9633 6.26974 19.1617 6.74807 19.5933 6.92307Z"
-                          fill="#002A24"
-                        />
-                        <path
-                          d="M12.4067 25.0764C11.9867 24.9131 11.5083 25.1114 11.3333 25.5431C11.17 25.9631 11.3683 26.4414 11.8 26.6164C12.22 26.7798 12.6983 26.5814 12.8733 26.1498C13.0367 25.7298 12.8383 25.2514 12.4067 25.0764Z"
-                          fill="#002A24"
-                        />
-                        <path
-                          d="M26.15 19.1262C25.73 18.9629 25.2517 19.1612 25.0767 19.5929C24.9133 20.0129 25.1117 20.4912 25.5433 20.6662C25.9633 20.8296 26.4417 20.6312 26.6167 20.1996C26.78 19.7796 26.5817 19.3012 26.15 19.1262Z"
-                          fill="#002A24"
-                        />
-                        <path
-                          d="M5.84998 12.8733C6.26998 13.0366 6.74831 12.8383 6.92331 12.4066C7.08665 11.9866 6.88831 11.5083 6.45665 11.3333C6.03665 11.1699 5.55831 11.3683 5.38331 11.7999C5.21998 12.2199 5.41831 12.6983 5.84998 12.8733Z"
-                          fill="#002A24"
-                        />
-                        <path
-                          d="M26.045 12.547C26.465 12.3603 26.6517 11.882 26.4767 11.462C26.3017 11.042 25.8117 10.8553 25.3917 11.0303C24.9717 11.2053 24.785 11.6953 24.96 12.1153C25.135 12.5353 25.625 12.722 26.045 12.547Z"
-                          fill="#002A24"
-                        />
-                        <path
-                          d="M5.95501 19.4531C5.53501 19.6398 5.34834 20.1181 5.52334 20.5381C5.69834 20.9581 6.18834 21.1448 6.60834 20.9698C7.02834 20.7948 7.21501 20.3048 7.04001 19.8848C6.85334 19.4648 6.37501 19.2781 5.95501 19.4531V19.4531Z"
-                          fill="#002A24"
-                        />
-                        <path
-                          d="M19.885 24.96C19.465 25.1467 19.2783 25.625 19.4533 26.045C19.64 26.465 20.1183 26.6517 20.5383 26.4767C20.9583 26.3017 21.145 25.8117 20.97 25.3917C20.795 24.9717 20.305 24.785 19.885 24.96V24.96Z"
-                          fill="#002A24"
-                        />
-                        <path
-                          d="M12.115 7.04013C12.535 6.85346 12.7217 6.37513 12.5467 5.95513C12.3717 5.53513 11.8817 5.34846 11.4617 5.52346C11.0417 5.69846 10.855 6.18846 11.03 6.60846C11.205 7.02846 11.695 7.21513 12.115 7.04013Z"
+                          d="M12.2336 5.25H12.2685C14.333 5.25 16.2044 6.45859 17.0499 8.34695C17.8909 10.2408 17.5411 12.4666 16.1535 13.9962C16.1535 13.9893 16.1535 14.003 16.1535 13.9962L16.625 14C17.5273 14 18.3695 13.5297 18.8409 12.7641C19.0859 12.0531 19.25 11.2984 19.25 10.5C19.25 6.63086 16.1191 3.5 12.25 3.5C8.38086 3.5 5.25 6.63086 5.25 10.5C5.25 12.7083 6.29562 14.6557 7.89523 15.9409C7.88594 15.8703 7.875 15.8211 7.875 15.75C7.88047 15.1375 8.04453 14.525 8.36172 14C6.96719 12.4688 6.60461 10.2539 7.4457 8.35078C8.29062 6.46406 10.1609 5.25 12.2336 5.25ZM2.625 12.25C3.11063 12.25 3.5 11.8617 3.5 11.375V10.5C3.5 5.67383 7.42383 1.75 12.25 1.75C17.0762 1.75 21 5.67383 21 10.5V11.375C21 13.7867 19.0367 15.75 16.625 15.75H14.875C14.875 14.7864 14.0886 14 13.125 14H11.375C10.4114 14 9.625 14.7864 9.625 15.75C9.625 16.7136 10.4114 17.5 11.375 17.5H16.625C20.0091 17.4932 22.7445 14.7585 22.75 11.375V10.5C22.75 4.70859 18.0398 0 12.25 0C6.46023 0 1.75 4.71023 1.75 10.5V11.375C1.75 11.8617 2.13992 12.25 2.625 12.25ZM17.2102 19.25H7.28984C3.26484 19.25 0 22.5148 0 26.5398C0 27.3492 0.652969 28 1.45797 28H23.0398C23.8492 28 24.5 27.3492 24.5 26.5398C24.5 22.5148 21.2352 19.25 17.2102 19.25ZM1.75766 26.25C1.90963 23.3291 4.33398 21 7.29203 21H17.2069C20.1649 21 22.5892 23.3291 22.7412 26.25H1.75766Z"
                           fill="#002A24"
                         />
                       </g>
                       <defs>
-                        <clipPath id="clip0_279_21">
-                          <rect
-                            width="28"
-                            height="28"
-                            fill="white"
-                            transform="translate(2 2)"
-                          />
+                        <clipPath id="clip0_343_528">
+                          <rect width="24.5" height="28" fill="white" />
                         </clipPath>
                       </defs>
                     </svg>
                   </div>
 
-                  <h2 className="mt-2 text-center font-bold">Earn Rewards</h2>
-                  <p className="text-center">With our new TreeCoins</p>
+                  <h2 className="mt-2 text-center font-bold">
+                    On Demand Support
+                  </h2>
+                  <p className="text-center">
+                    Experts to answer every question
+                  </p>
                 </div>
               </div>
             </div>
@@ -360,28 +325,28 @@ export default function Page() {
       {/* Testimonials */}
 
       <div className="relative bg-forest-800 ">
-        <div className="text-center p-12">
-          <h1 className="text-4xl font-bold tracking-tight text-wood-0 items-center justify-center">
+        <div className="text-center pt-16 px-6 lg:px-28">
+          <h1 className="text-3xl lg:text-5xl font-bold tracking-tight text-wood-0 items-center justify-center">
             Testimonials
           </h1>
         </div>
-        <div className="relative flex items-center justify-center mx-auto text-center pb-12">
+        <div className="relative flex items-center justify-center mx-auto text-center pt-14 pb-12 lg:pb-24">
           <div
             id="slider"
-            className="w-full h-full scroll whitespace-nowrap scroll-smooth"
+            className="w-full h-full scroll whitespace-nowrap scroll-smooth scroll overflow-x-auto lg:overflow-visible"
           >
             <img
-              className="w-[220px] inline-block p-2 hover:scale-105 ease-in-out duration-300"
+              className="w-[160px] lg:w-[320px] inline-block p-2 "
               src="/Images/JoeMoped.png"
               alt="/"
             />
-            <div className="relative w-[340px] aspect-square inline-block p-2 hover:scale-105 ease-in-out duration-300">
+            <div className="relative aspect-square inline-block p-2 ">
               <img
-                className="w-[340px] inline-block p-2"
+                className="w-[210px] h-[210px] lg:w-[432px] lg:h-[432px] inline-block p-2"
                 src="/Images/JoeMoped.png"
                 alt="/"
               />
-              <div className="absolute w-full -top-32 left-0 z-10">
+              <div className="absolute w-full -top-20 left-0 lg:-top-40 z-10">
                 <div
                   className="bg-contain bg-no-repeat bg-center"
                   style={{
@@ -391,7 +356,7 @@ export default function Page() {
                   }}
                 />
               </div>
-              <div className="absolute w-[30%] h-[30%] left-12  top-8 z-9">
+              <div className="absolute w-[25%] h-[25%] left-12  top-8 lg:top-14 lg:left-20 z-9">
                 <div
                   className="bg-contain bg-no-repeat bg-center"
                   style={{
@@ -402,7 +367,7 @@ export default function Page() {
                 />
               </div>
 
-              <div className="absolute w-full -bottom-32 left-16 z-10">
+              <div className="hidden w-full -bottom-52 left-16 z-10  absolute lg:flex ">
                 <div
                   className="bg-contain bg-no-repeat bg-center"
                   style={{
@@ -414,22 +379,26 @@ export default function Page() {
               </div>
             </div>
             <img
-              className="w-[220px] inline-block p-2 hover:scale-105 ease-in-out duration-300"
+              className="w-[160px] lg:w-[320px] inline-block p-2 "
               src="/Images/JoeMoped.png"
               alt="/"
             />
           </div>
         </div>
+        <p className="lg:hidden text-center font-normal italic text-wood-50 text-lg px-6 pb-16">
+          “Lorem ipsum dolor sit amet consectetur. Eleifend convallis proin
+          libero convallis amet id. Amet sem nec vel diam.”
+        </p>
       </div>
 
       {/* eBikes */}
 
       <div className="relative bg-white">
-        <div className="mx-auto max-w-5xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8">
-          <div className=" lg:absolute order-2 lg:order-1 lg:col-span-5 lg:-mr-8 lg:inset-0 lg:left-1/2 lg:mr-0 xs:pt-32 flex items-center justify-center">
-            <div className="relative w-96  h-96 aspect-square rounded-full xs:pt-4">
+        <div className="mx-auto max-w-full lg:grid lg:grid-cols-12 mt-12 lg:mb-16 lg:mt-24 mx-6 lg:gap-x-8 lg:px-28">
+          <div className=" lg:absolute order-2 lg:order-1 lg:col-span-5 lg:inset-0 lg:left-1/2 xs:pt-32 lg:flex items-center justify-center">
+            <div className="relative w-[342px] lg:w-[529px] aspect-square rounded-full ">
               <img
-                className="w-full h-full bg-contain bg-no-repeat bg-center rounded-full"
+                className="w-[327px] h-[327px] lg:w-[529px] lg:h-[529px] bg-contain bg-no-repeat bg-center rounded-full"
                 style={{
                   backgroundImage: `url("Images/eBike.png")`,
                 }}
@@ -445,7 +414,7 @@ export default function Page() {
                 />
               </div>
               <div>
-                <div className="absolute w-[70%] h-[70%] -bottom-20 -right-24 z-10">
+                <div className="absolute w-[70%] h-[70%] -bottom-20 -right-24 lg:-right-32 lg:-bottom-32 z-10">
                   <div
                     className="bg-contain bg-no-repeat bg-center"
                     style={{
@@ -460,35 +429,42 @@ export default function Page() {
           </div>
 
           {/* Text */}
-          <div className="flex px-6 pb-24 pt-10 order-1 lg:order-2 sm:pb-32 lg:col-span-7 lg:px-0 lg:pb-64 lg:pt-64 xl:col-span-6">
-            <div className="mx-auto max-w-2xl lg:mx-0">
+          <div className="flex pb-24 pt-10 order-1 lg:order-2 sm:pb-32 lg:col-span-7 lg:px-0 xl:col-span-6">
+            <div className="mx-auto max-w-full lg:mx-0">
               <div className="flex col-span-2">
-                <h3 className="font-bold  text-forest-500 border-4 border-forest-100 rounded-full bg-forest-100">
+                <h3 className="font-bold px-2 text-forest-500 border-4 border-forest-100 rounded-full bg-forest-100 mb-4">
                   eBikes
                 </h3>
               </div>
 
-              <h1 className="text-4xl font-bold tracking-tight text-wood-900 sm:mt-10 sm:text-6xl">
+              <h1 className="text-3xl font-bold tracking-tight text-wood-900 sm:mt-10 lg:text-5xl pb-4">
                 No Bike? No Problem.
               </h1>
-              <p className="mt-6 text-lg leading-8 text-wood-700">
+              <p className="pb-4 font-normal text-lg leading-7 text-wood-700">
                 The best way to move around the city. Our whole fleet is
                 electric and we are committed to reducing emissions in our
                 cities.
               </p>
-              <div className="flex  gap-2 mt-4">
-                <div className="border-b-4 flex flex-col border-2 border-forest-900 bg-cassia-200 rounded-3xl p-4 ">
-                  <h2 className="mt-2 font-bold">3,000+</h2>
-                  <p>Electric Bikes</p>
-                </div>
+              <div
+                id="slider"
+                className="w-full scroll whitespace-nowrap scroll-smooth overflow-x-auto scroll-left"
+              >
+                <div className="flex  gap-2 mt-4">
+                  <div className="border-b-4 flex flex-col border-2 border-forest-900 bg-cassia-200 rounded-3xl p-4 ">
+                    <h2 className="mt-2 text-lg font-bold leading-7">3,000+</h2>
+                    <p>Electric Bikes</p>
+                  </div>
 
-                <div className="border-b-4  flex flex-col border-2 border-forest-900 rounded-3xl p-4 ">
-                  <h2 className="mt-2 font-bold">200+</h2>
-                  <p>Electric Mopeds</p>
-                </div>
-                <div className="border-b-4 flex flex-col border-2 border-forest-900 rounded-3xl p-4 ">
-                  <h2 className="mt-2 font-bold">Up to 50%</h2>
-                  <p>Discount in minute bundles</p>
+                  <div className="border-b-4  flex flex-col border-2 border-forest-900 rounded-3xl p-4 ">
+                    <h2 className="mt-2 text-lg font-bold leading-7">200+</h2>
+                    <p>Electric Mopeds</p>
+                  </div>
+                  <div className="border-b-4 flex flex-col border-2 border-forest-900 rounded-3xl p-4 ">
+                    <h2 className="mt-2 text-lg font-bold leading-7">
+                      Up to 50%
+                    </h2>
+                    <p>Discount in minute bundles</p>
+                  </div>
                 </div>
               </div>
               <div className="mt-10 flex items-center gap-x-6">
@@ -497,10 +473,10 @@ export default function Page() {
                   className={buttonVariants({
                     variant: "primary",
                     size: "xl",
-                    className: "border-b-4 text-lg pl-8 pr-8",
+                    className: "border-b-4 text-lg w-48 h-[60px] px-4",
                   })}
                 >
-                  Apply Now!
+                  Start Now!
                 </Link>
               </div>
             </div>
@@ -510,27 +486,27 @@ export default function Page() {
 
       {/* FAQ */}
 
-      <div className="bg-white ">
-        <div className="mx-auto border-2 border-b-4 border-forest-900 rounded-3xl max-w-5xl divide-x divide-gray-900/10 px-6 py-24 sm:py-32 lg:px-8 lg:py-10">
-          <h1 className="text-lg text-center font-bold tracking-tight text-wood-900 sm:mt-10 sm:text-6xl">
-            Frequently asked questions
+      <div className="bg-white px-6 lg:px-28">
+        <div className="mx-auto mb-16 max-w-full border-2 border-b-8 border-forest-900 rounded-3xl divide-x  px-6 py-6 lg:px-[72px] lg:py-10">
+          <h1 className="text-3xl lg:text-center font-bold leading-9 tracking-tight text-wood-900 sm:mt-10 lg:text-5xl">
+            What do I need to start using ForestParcel?
           </h1>
-          <p className="mt-6 text-lg text-center leading-8 text-wood-700">
+          <p className="mt-6 text-lg font-normal lg:text-center leading-8 text-wood-700">
             Be sure to have the following information ready:
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-8 mt-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-8 lg:mt-16 mt-6">
             {faqs.map((faq) => (
-              <div key={faq.id} className="p-4">
-                <h2 className="text-xl font-bold text-forest-900 mb-2">
+              <div key={faq.id} className="lg:p-4 mb-10">
+                <h2 className="text-xl font-bold text-forest-900 lg:mb-2 mb-4">
                   {faq.question}
                 </h2>
-                <ul className="list-disc list-inside text-gray-700">
+                <ul className="list-disc list-inside text-wood-700 text-lg lg:pt-4">
                   {faq.answer.map((point, index) => (
-                    <li key={index} className="flex ">
+                    <li key={index} className="flex mt-4">
                       <img
                         src="/Images/check.png"
                         alt="check"
-                        className="mr-2 h-4 w-4"
+                        className="mr-4 mt-0.5 h-6 w-6 aspect-square"
                       />
                       {point}
                     </li>
@@ -539,13 +515,13 @@ export default function Page() {
               </div>
             ))}
           </div>
-          <div className="mt-10 flex justify-center gap-x-6">
+          <div className="lg:mt-10 lg:mb-16 flex lg:justify-center gap-x-6">
             <Link
               href="/application"
               className={buttonVariants({
                 variant: "primary",
                 size: "xl",
-                className: "border-b-4 text-lg pl-8 pr-8",
+                className: "border-b-4 text-lg w-48 h-[60px] px-4",
               })}
             >
               Apply Now!
@@ -553,72 +529,75 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <div className="bg-white py-28" />
 
       {/* Footer */}
 
-      <div className="bg-forest-800 relative text-center">
-        <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-10">
-          <h1 className="text-4xl font-bold tracking-tight text-wood-0 justify-center ">
-            Boost your delivery service. <br />
-            Start using ForestParcel today.
-          </h1>
-          <p className="mt-6 text-lg leading-8 text-wood-0 pb-12">
-            Get started with a free account. Sign up now and start delivering
-            parcels in no time.
-          </p>
-          <div className="mt-10 flex justify-center gap-x-6">
-            <Link
-              href="/application"
-              className={buttonVariants({
-                variant: "primary",
-                size: "xl",
-                className: "border-b-4 text-lg pl-8 pr-8",
-              })}
-            >
-              Apply Now!
-            </Link>
+      <div className="bg-forest-800 relative ">
+        <div className="mx-auto max-w-full px-6 lg:px-28 grid">
+          <div className="order-2 lg:order-1 grid lg:text-center">
+            <h1 className="text-3xl lg:text-5xl font-bold tracking-tight text-wood-0 justify-center mt-10 lg:mt-12 lg:leading-[62px] ">
+              Boost your delivery service. <br />
+              Start using ForestParcel today.
+            </h1>
+            <p className="mt-6 text-lg leading-8 text-wood-0 pb-10 lg:pb-12">
+              Get started with a free account. Sign up now and start delivering
+              parcels in no time.
+            </p>
+            <div className="flex gap-x-6 lg:justify-center">
+              <Link
+                href="/application"
+                className={buttonVariants({
+                  variant: "primary",
+                  size: "xl",
+                  className: "border-b-4 text-lg w-48 h-[60px] px-4",
+                })}
+              >
+                Apply Now!
+              </Link>
+            </div>
           </div>
-          <div className="inline-flex relative w-[633px] h-[366px] justify-center items-center">
-            <div className="absolute w-[45%] h-[45%] -top-4">
-              <div
-                className="bg-contain bg-no-repeat bg-center"
-                style={{
-                  backgroundImage: `url("/Images/cloud.png")`,
-                  width: "40%",
-                  paddingBottom: "100%",
-                }}
-              />
-            </div>
-            <div className="absolute w-[30%] h-[30%] left-10 bottom-20">
-              <div
-                className="bg-contain bg-no-repeat bg-center"
-                style={{
-                  backgroundImage: `url("/Images/Layer_1.png")`,
-                  width: "60%",
-                  paddingBottom: "100%",
-                }}
-              />
-            </div>
-            <div className="absolute w-[65%] h-[65%]">
-              <div
-                className="bg-contain bg-no-repeat bg-center"
-                style={{
-                  backgroundImage: `url("/Images/bike.png")`,
-                  width: "100%",
-                  paddingBottom: "100%",
-                }}
-              />
-            </div>
-            <div className="absolute w-[30%] h-[30%] -right-4 bottom-16">
-              <div
-                className="bg-contain bg-no-repeat bg-center"
-                style={{
-                  backgroundImage: `url("/Images/CuteTree.png")`,
-                  width: "60%",
-                  paddingBottom: "100%",
-                }}
-              />
+          <div className="order-1 lg:order-2 grid lg:justify-items-center">
+            <div className="inline-flex relative w-[342px] h-[200px] lg:w-[633px] lg:h-[366px]  justify-center items-center">
+              <div className="absolute w-[45%] h-[45%] -top-4">
+                <div
+                  className="bg-contain bg-no-repeat bg-center"
+                  style={{
+                    backgroundImage: `url("/Images/cloud.png")`,
+                    width: "40%",
+                    paddingBottom: "100%",
+                  }}
+                />
+              </div>
+              <div className="absolute w-[30%] h-[30%] left-10 bottom-20">
+                <div
+                  className="bg-contain bg-no-repeat bg-center"
+                  style={{
+                    backgroundImage: `url("/Images/Layer_1.png")`,
+                    width: "60%",
+                    paddingBottom: "100%",
+                  }}
+                />
+              </div>
+              <div className="absolute w-[65%] h-[65%]">
+                <div
+                  className="bg-contain bg-no-repeat bg-center"
+                  style={{
+                    backgroundImage: `url("/Images/bike.png")`,
+                    width: "100%",
+                    paddingBottom: "100%",
+                  }}
+                />
+              </div>
+              <div className="absolute w-[30%] h-[30%] -right-4 bottom-16">
+                <div
+                  className="bg-contain bg-no-repeat bg-center"
+                  style={{
+                    backgroundImage: `url("/Images/CuteTree.png")`,
+                    width: "60%",
+                    paddingBottom: "100%",
+                  }}
+                />
+              </div>
             </div>
           </div>
         </div>

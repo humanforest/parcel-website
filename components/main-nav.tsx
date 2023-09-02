@@ -20,7 +20,7 @@ export function MainNav({ items }: MainNavProps) {
     <Disclosure as="nav" className="bg-forest-800">
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-full py-6 px-6 lg:px-28">
             <div className="flex text-xl justify-between">
               <div className="flex">
                 <div className="flex shrink-0 items-center">
