@@ -16,6 +16,10 @@ export const siteConfig = {
       title: "Blog",
       href: "#",
     },
+    {
+      title: "Help",
+      href: "#",
+    },
   ],
   links: {
     signup: "/application",

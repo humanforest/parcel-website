@@ -1,7 +1,8 @@
 import Link from "next/link"
+import { ChevronLeft, ChevronRight } from "lucide-react"
 
 import { buttonVariants } from "@/components/ui/button"
-import ScrollBanner from "@/components/banner"
+import { Icons } from "@/components/icons"
 
 export const metadata = {
   title: "Couriers",
@@ -14,10 +15,10 @@ const faqs = [
     answer: [
       " 18+ years old",
       " HumanForest user account. ",
-      <a href="https://example.com/download" className="text-forest-600">
-        Download Here
-      </a>,
-
+      {
+        text: "Download Here",
+        link: "https://example.com/download",
+      },
       " Smartphone",
       " UK bank account",
     ],
@@ -88,6 +89,7 @@ export default function Page() {
           </div>
 
           {/* Text */}
+
           <div className="flex sm:gap-10  order-1 lg:order-2 sm:pb-32 lg:col-span-7 lg:py-48 xl:col-span-6">
             <div className="mx-auto lg:mx-0 pt-10">
               <h1 className="lg:text-5xl text-2xl font-bold tracking-tight text-white  ">
@@ -227,6 +229,7 @@ export default function Page() {
               member of our delivery network.
             </p>
           </div>
+
           <div
             id="slider"
             className="w-full h-full scroll whitespace-nowrap scroll-smooth overflow-x-auto scroll-left"
@@ -394,8 +397,8 @@ export default function Page() {
       {/* eBikes */}
 
       <div className="relative bg-white">
-        <div className="mx-auto max-w-full lg:grid lg:grid-cols-12 mt-12 lg:mb-16 lg:mt-24 mx-6 lg:gap-x-8 lg:px-28">
-          <div className=" lg:absolute order-2 lg:order-1 lg:col-span-5 lg:inset-0 lg:left-1/2 xs:pt-32 lg:flex items-center justify-center">
+        <div className="mx-auto max-w-full lg:grid lg:grid-cols-12 mt-12 lg:mb-16 lg:mt-24 px-6 lg:gap-x-8 lg:px-28">
+          <div className=" lg:absolute order-2 lg:order-1 lg:col-span-5 lg:inset-0 lg:left-1/2 xs:pt-32 lg:flex items-center ">
             <div className="relative w-[342px] lg:w-[529px] aspect-square rounded-full ">
               <img
                 className="w-[327px] h-[327px] lg:w-[529px] lg:h-[529px] bg-contain bg-no-repeat bg-center rounded-full"
@@ -451,16 +454,18 @@ export default function Page() {
               >
                 <div className="flex  gap-2 mt-4">
                   <div className="border-b-4 flex flex-col border-2 border-forest-900 bg-cassia-200 rounded-3xl p-4 ">
-                    <h2 className="mt-2 text-lg font-bold leading-7">3,000+</h2>
+                    <h2 className="mt-2 text-2xl font-bold leading-7">
+                      3,000+
+                    </h2>
                     <p>Electric Bikes</p>
                   </div>
 
                   <div className="border-b-4  flex flex-col border-2 border-forest-900 rounded-3xl p-4 ">
-                    <h2 className="mt-2 text-lg font-bold leading-7">200+</h2>
+                    <h2 className="mt-2 text-2xl font-bold leading-7">200+</h2>
                     <p>Electric Mopeds</p>
                   </div>
                   <div className="border-b-4 flex flex-col border-2 border-forest-900 rounded-3xl p-4 ">
-                    <h2 className="mt-2 text-lg font-bold leading-7">
+                    <h2 className="mt-2 text-2xl font-bold leading-7">
                       Up to 50%
                     </h2>
                     <p>Discount in minute bundles</p>
@@ -501,14 +506,25 @@ export default function Page() {
                   {faq.question}
                 </h2>
                 <ul className="list-disc list-inside text-wood-700 text-lg lg:pt-4">
-                  {faq.answer.map((point, index) => (
+                  {faq.answer.map((item, index) => (
                     <li key={index} className="flex mt-4">
-                      <img
-                        src="/Images/check.png"
-                        alt="check"
-                        className="mr-4 mt-0.5 h-6 w-6 aspect-square"
-                      />
-                      {point}
+                      {typeof item === "object" ? (
+                        <a
+                          href={item.link}
+                          className="text-forest-500 hover:underline pl-10 -mt-3"
+                        >
+                          {item.text}
+                        </a>
+                      ) : (
+                        <>
+                          <img
+                            src="/Images/check.png"
+                            alt="check"
+                            className="mr-4 mt-0.5 h-6 w-6 aspect-square"
+                          />
+                          {item}
+                        </>
+                      )}
                     </li>
                   ))}
                 </ul>
