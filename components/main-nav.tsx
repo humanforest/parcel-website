@@ -19,7 +19,7 @@ export function MainNav({ items }: MainNavProps) {
       {({ open }) => (
         <>
           <div className="mx-auto max-w-full py-6 px-6 lg:px-28">
-            <div className="flex text-xl justify-between">
+            <div className="flex text-2xl justify-between">
               <div className="flex">
                 <div className="flex shrink-0 items-center">
                   <Link href="/" className="flex items-center space-x-2">
@@ -29,24 +29,19 @@ export function MainNav({ items }: MainNavProps) {
                     </span>
                   </Link>
                 </div>
-                <div className="hidden sm:ml-6 sm:flex  sm:space-x-8 ">
+                <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
                   {items?.length ? (
                     <nav className="flex">
                       {items?.map(
                         (item, index) =>
                           item.href && (
-                            <Link
+                            <a
                               key={index}
                               href={item.href}
-                              className={buttonVariants({
-                                className:
-                                  "text-forest-100 hover:text-forest-200 bg-forest-800 border-0 border-forest-800 hover:bg-forest-800",
-
-                                size: "xl",
-                              })}
+                              className="text-wood-0  hover:text-forest-200 font-bold text-lg text-centre px-5 pt-2"
                             >
                               {item.title}
-                            </Link>
+                            </a>
                           )
                       )}
                     </nav>
@@ -59,7 +54,7 @@ export function MainNav({ items }: MainNavProps) {
                   className={buttonVariants({
                     variant: "primary",
                     size: "xl",
-                    className: "font-medium",
+                    className: "font-bold",
                   })}
                 >
                   Sign In
@@ -69,10 +64,10 @@ export function MainNav({ items }: MainNavProps) {
                   className={buttonVariants({
                     size: "xl",
                     className:
-                      "border-b-4 bg-wood-50 text-wood-900 hover:bg-sky-100 font-medium",
+                      "border-b-4 bg-wood-50 text-wood-900 hover:bg-sky-100 font-bold",
                   })}
                 >
-                  Start Your Delivery
+                  Sign Up
                 </Link>
               </div>
 

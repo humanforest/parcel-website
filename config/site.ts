@@ -13,6 +13,10 @@ export const siteConfig = {
       href: "/application",
     },
     {
+      title: "Pricing",
+      href: "#",
+    },
+    {
       title: "Blog",
       href: "#",
     },
