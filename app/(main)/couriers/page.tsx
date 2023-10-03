@@ -177,7 +177,13 @@ export default function Page() {
               {benefits.map((item, index) => (
                 <div
                   key={index}
-                  className="lg:col-span-2 flex flex-col justify-start items-center border-2 border-forest-900 border-b-4 rounded-3xl p-6"
+                  className={`flex flex-col items-center border-2 border-forest-900 border-b-4 rounded-3xl p-6 ${
+                    index === 3
+                      ? "col-span-3 justify-center ml-40" // Apply classes for the 4th item
+                      : index === 4
+                      ? "col-span-3 justify-center mr-40" // Apply classes for the 5th item
+                      : "col-span-2" // Apply default classes for other items
+                  }`}
                 >
                   <img
                     src="/Images/Group_624720.png"
