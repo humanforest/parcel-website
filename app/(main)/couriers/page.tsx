@@ -1,8 +1,8 @@
 import Link from "next/link"
-import { ChevronLeft, ChevronRight } from "lucide-react"
 
 import { buttonVariants } from "@/components/ui/button"
 import { Icons } from "@/components/icons"
+import ScrollableSections from "@/components/scroll"
 
 export const metadata = {
   title: "Couriers",
@@ -64,7 +64,7 @@ const benefits = [
 
 export default function Page() {
   return (
-    <div className="bg-white">
+    <div className="bg-white ">
       <div className="relative bg-forest-800 pb-20">
         <div className="mx-auto max-w-full lg:grid lg:grid-cols-12 sm:grid-cols-1 lg:gap-x-8 lg:px-28 lg:h-[657px] sm:h-[685px] px-6  top-24">
           {/* Images */}
@@ -201,50 +201,15 @@ export default function Page() {
         </div>
       </div>
 
-      {/* Hero Two */}
-      <div className="relative bg-white mb-20">
-        <div className="mx-auto max-w-full lg:grid lg:grid-cols-12 mt-12 lg:mb-16 lg:mt-24 px-6 lg:gap-x-8 lg:px-28">
-          {/* Image */}
-          <div className="order-2 lg:col-span-5 xs:pt-32 lg:flex items-center lg:order-1">
-            <img
-              src="/Images/MikeyBike.png"
-              alt="manOnBike"
-              className="w-[600px] h-[520px]"
-            />
-          </div>
+      {/* Scroll Section */}
 
-          {/* Text */}
-          <div className="flex pb-24 pt-10 lg:col-span-7 lg:left-1/2 lg:px-0 xl:col-span-6 lg:order-2">
-            <div className="mx-auto max-w-full lg:ml-6 justify-center items-center">
-              <h1 className="text-5xl font-bold tracking-tight text-wood-900 justify-center leading-[3.5rem]">
-                An innovative and sustainable way to deliver packages across
-                London
-              </h1>
-              <div className="mt-10 flex items-center gap-x-6">
-                <img
-                  src="/Images/One.png"
-                  alt="manOnBike"
-                  className="w-[52px] h-[52px]"
-                />
-                <Link
-                  href="/application"
-                  className={buttonVariants({
-                    variant: "primary",
-                    size: "xl",
-                    className: "border-b-4 text-lg w-48 h-[60px] px-4",
-                  })}
-                >
-                  Go Online
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div className="relative h-[335vh] bg-white hidden sm:block">
+        <ScrollableSections />
       </div>
 
       {/* Testimonials */}
 
-      <div className="relative bg-forest-800 ">
+      <div className="relative bg-forest-800">
         <div className="text-center pt-16 px-6 lg:px-28">
           <h1 className="text-3xl lg:text-5xl font-bold tracking-tight text-wood-0 items-center justify-center">
             Testimonials
@@ -306,7 +271,7 @@ export default function Page() {
 
       {/* eBikes */}
 
-      <div className="relative bg-white">
+      <div className="relative bg-white ">
         <div className="mx-auto max-w-full lg:grid lg:grid-cols-12 mt-12 lg:mb-16 lg:mt-24 px-6 lg:gap-x-8 lg:px-28">
           <div className=" lg:absolute order-2 lg:order-1 lg:col-span-5 lg:inset-0 lg:left-1/2 xs:pt-32 lg:flex items-center ">
             <div className="relative w-[342px] lg:w-[529px] aspect-square rounded-full ">
@@ -397,7 +362,7 @@ export default function Page() {
 
       {/* FAQ */}
 
-      <div className="bg-white px-6 lg:px-28">
+      <div className="bg-white px-6 lg:px-28 ">
         <div className="mx-auto mb-16 max-w-full border-2 border-b-8 border-forest-900 rounded-3xl divide-x  px-6 py-6 lg:px-[72px] lg:py-10">
           <h1 className="text-3xl lg:text-center font-bold leading-9 tracking-tight text-wood-900 sm:mt-10 lg:text-5xl">
             What do I need to start using ForestParcel?
