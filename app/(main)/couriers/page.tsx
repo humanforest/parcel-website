@@ -1,7 +1,6 @@
 import Link from "next/link"
 
 import { buttonVariants } from "@/components/ui/button"
-import { Icons } from "@/components/icons"
 import ScrollableSections from "@/components/scroll"
 
 export const metadata = {
@@ -42,7 +41,7 @@ const faqs = [
 const benefits = [
   {
     title: "Earn More",
-    description: "Fast bikes that reach up to 25km/hr speed",
+    description: "Fast bikes that reach up to 25km/hr",
   },
   {
     title: "Work that suits you",
@@ -58,7 +57,7 @@ const benefits = [
   },
   {
     title: "Be fully supported",
-    description: "Real human support while you are working",
+    description: "Real human support while you work",
   },
 ]
 
@@ -172,30 +171,34 @@ export default function Page() {
               member of our delivery network.
             </p>
           </div>
-          <div className="flex justify-center space-x-12 items-center">
-            <div className="mt-16 mb-16 grid grid-cols-6 gap-10 lg:grid-cols-6 ">
-              {benefits.map((item, index) => (
-                <div
-                  key={index}
-                  className={`flex flex-col items-center border-2 border-forest-900 border-b-4 rounded-3xl p-6 ${
-                    index === 3
-                      ? "col-span-3 justify-center ml-40" // Apply classes for the 4th item
-                      : index === 4
-                      ? "col-span-3 justify-center mr-40" // Apply classes for the 5th item
-                      : "col-span-2" // Apply default classes for other items
-                  }`}
-                >
-                  <img
-                    src="/Images/Group_624720.png"
-                    alt="pie_chart"
-                    className="w-[74.53px] h-[80px]"
-                  />
-                  <h2 className="mt-2 text-center font-bold">{item.title}</h2>
-                  <p className="mt-2 text-center text-wood-700 text-md">
-                    {item.description}
-                  </p>
-                </div>
-              ))}
+          <div className="w-full scroll whitespace-nowrap scroll-smooth overflow-x-auto scroll-left">
+            <div className="flex lg:justify-center space-x-12 items-center">
+              <div className="mt-16 mb-16 lg:grid lg:gap-10 lg:grid-cols-6 ">
+                {benefits.map((item, index) => (
+                  <div
+                    key={index}
+                    className={`w-80 lg:w-auto inline-block mr-4 lg:mr-0 lg:flex lg:flex-col items-center border-2 border-forest-900 border-b-4 rounded-3xl p-4 lg:p-6 ${
+                      index === 3
+                        ? "lg:col-span-3  mr-4 lg:ml-40 w-80 lg:w-auto"
+                        : index === 4
+                        ? "lg:col-span-3 mr-4 lg:mr-40 w-80 lg:w-auto "
+                        : "lg:col-span-2"
+                    }`}
+                  >
+                    <div className="flex justify-center items-center">
+                      <img
+                        src="/Images/Group_624720.png"
+                        alt="pie_chart"
+                        className="w-[74.53px] h-[80px] "
+                      />
+                    </div>
+                    <h2 className="mt-2 text-center font-bold">{item.title}</h2>
+                    <p className="mt-2 text-center text-wood-700 text-md ">
+                      {item.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -215,57 +218,66 @@ export default function Page() {
             Testimonials
           </h1>
         </div>
-        <div className="relative flex items-center justify-center mx-auto text-center pt-14 pb-12 lg:pb-24">
-          <div>
-            <img
-              className="w-[160px] lg:w-[320px] inline-block p-2 "
-              src="/Images/Testimonial1.png"
-              alt="/"
-            />
-            <div className="relative aspect-square inline-block p-2 ">
+        <div className="whitespace-nowrap overflow-hidden ">
+          <div className="relative flex items-center justify-center mx-auto text-center pt-14 lg:pb-12 pb-6 -ml-16 lg:-ml-0 lg:pb-24">
+            <div>
               <img
-                className="w-[210px] h-[210px] lg:w-[432px] lg:h-[432px] inline-block p-2"
-                src="/Images/Testimonial2.png"
+                className="w-[160px] lg:w-[320px] inline-block p-2 "
+                src="/Images/Testimonial1.png"
                 alt="/"
               />
-              <div className="absolute w-full -top-20 -left-10 lg:-top-40 z-10">
-                <div
-                  className="bg-contain bg-no-repeat bg-center"
-                  style={{
-                    backgroundImage: `url("/Images/MusaSmith.png")`,
-                    width: "60%",
-                    paddingBottom: "100%",
-                  }}
+              <div className="relative aspect-square inline-block p-2 ">
+                <img
+                  className="w-[210px] h-[210px] lg:w-[432px] lg:h-[432px] inline-block p-2"
+                  src="/Images/Testimonial2.png"
+                  alt="/"
                 />
-              </div>
-              <div className="absolute w-[25%] h-[25%] left-12  top-8 lg:top-14 lg:left-20 z-9">
-                <div
-                  className="bg-contain bg-no-repeat bg-center"
-                  style={{
-                    backgroundImage: `url("/Images/Vector_141.png")`,
-                    width: "70%",
-                    paddingBottom: "100%",
-                  }}
-                />
-              </div>
+                <div className="absolute w-full -top-20 -left-10 lg:-top-40 z-10">
+                  <div
+                    className="bg-contain bg-no-repeat bg-center"
+                    style={{
+                      backgroundImage: `url("/Images/MusaSmith.png")`,
+                      width: "60%",
+                      paddingBottom: "100%",
+                    }}
+                  />
+                </div>
+                <div className="absolute w-[25%] h-[25%] left-12  top-8 lg:top-14 lg:left-20 z-9">
+                  <div
+                    className="bg-contain bg-no-repeat bg-center"
+                    style={{
+                      backgroundImage: `url("/Images/Vector_141.png")`,
+                      width: "70%",
+                      paddingBottom: "100%",
+                    }}
+                  />
+                </div>
 
-              <div className="hidden w-full -bottom-52 left-16 z-10  absolute lg:flex ">
-                <div
-                  className="bg-contain bg-no-repeat bg-center"
-                  style={{
-                    backgroundImage: `url("/Images/testimonial.png")`,
-                    width: "60%",
-                    paddingBottom: "100%",
-                  }}
-                />
+                <div className="hidden w-full -bottom-52 left-16 z-10  absolute lg:flex ">
+                  <div
+                    className="bg-contain bg-no-repeat bg-center"
+                    style={{
+                      backgroundImage: `url("/Images/testimonial.png")`,
+                      width: "60%",
+                      paddingBottom: "100%",
+                    }}
+                  />
+                </div>
               </div>
+              <img
+                className="w-[160px] lg:w-[320px] inline-block p-2 "
+                src="/Images/Testimonial3.png"
+                alt="/"
+              />
             </div>
-            <img
-              className="w-[160px] lg:w-[320px] inline-block p-2 "
-              src="/Images/Testimonial3.png"
-              alt="/"
-            />
           </div>
+        </div>
+        <div className="lg:hidden pb-6 ml-4 mr-4">
+          <p className="text-lg font-normal text-center text-wood-50 italic ">
+            "I truly appreciate the effort and attention Forest Parcel puts into
+            gathering feedback from users. It shows a genuine commitment to
+            improving the service for everyone involved."
+          </p>
         </div>
       </div>
 
@@ -323,26 +335,20 @@ export default function Page() {
                 electric and we are committed to reducing emissions in our
                 cities.
               </p>
-              <div
-                id="slider"
-                className="w-full scroll whitespace-nowrap scroll-smooth overflow-x-auto scroll-left"
-              >
-                <div className="flex  gap-2 mt-4">
-                  <div className="border-b-4 flex flex-col border-2 border-forest-900 bg-cassia-200 rounded-3xl p-4 ">
-                    <h2 className="mt-2 text-2xl font-bold leading-7">
-                      3,000+
-                    </h2>
-                    <p>Electric Bikes</p>
-                  </div>
+              <div className="flex whitespace-nowrap gap-2 mt-4">
+                <div className="border-b-4 flex flex-col border-2 border-forest-900 bg-cassia-200 rounded-3xl p-4 ">
+                  <h2 className="mt-2 text-2xl font-bold leading-7">3,000+</h2>
+                  <p>Electric Bikes</p>
+                </div>
 
-                  <div className="border-b-4 flex flex-col border-2 border-forest-900 rounded-3xl p-4 ">
-                    <h2 className="mt-2 text-2xl font-bold leading-7">
-                      Up to 50%
-                    </h2>
-                    <p>Discount in minute bundles</p>
-                  </div>
+                <div className="border-b-4 flex flex-col border-2 border-forest-900 rounded-3xl p-4 ">
+                  <h2 className="mt-2 text-2xl font-bold leading-7">
+                    Up to 50%
+                  </h2>
+                  <p>Discount in minute bundles</p>
                 </div>
               </div>
+
               <div className="mt-10 flex items-center gap-x-6">
                 <Link
                   href="/application"
@@ -402,11 +408,11 @@ export default function Page() {
               </div>
             ))}
           </div>
-          <p className="mt-6 text-lg font-normal lg:text-center leading-8 text-wood-700">
+          <p className="mt-6 text-lg font-normal lg:text-center leading-8 text-wood-700 pb-6">
             If you have any questions, please contact us at{" "}
             <a
               href="mailto:parcel@humanforest.co.uk"
-              className="text-green-700 underline"
+              className="text-green-700 underline "
             >
               parcel@humanforest.co.uk
             </a>

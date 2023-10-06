@@ -126,7 +126,7 @@ function ScrollableSections() {
                 <img
                   src="/Images/PhoneSlide1.png"
                   alt="manOnBike"
-                  className="w-[500px] h-[534px]"
+                  className="w-[450px] h-[534px]"
                 />
               </div>
               <div className="lg:col-span-7 lg:left-1/2">
@@ -181,7 +181,7 @@ function ScrollableSections() {
                 <img
                   src="/Images/PhoneSlide2.png"
                   alt="manOnBike"
-                  className="w-[500px] h-[534px]"
+                  className="w-[450px] h-[534px]"
                 />
               </div>
               <div className="lg:col-span-7 lg:left-1/2">

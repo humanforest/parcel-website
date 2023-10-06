@@ -13,7 +13,7 @@ interface MainNavProps {
   items?: NavItem[]
 }
 
-export function MainNav({ items }: MainNavProps) {
+export function MainNav({ items, activeItem, onItemClick }: MainNavProps) {
   return (
     <Disclosure as="nav" className="bg-forest-800">
       {({ open }) => (
@@ -38,7 +38,12 @@ export function MainNav({ items }: MainNavProps) {
                             <a
                               key={index}
                               href={item.href}
-                              className="text-wood-0  hover:text-forest-200 font-bold text-lg text-centre px-5 pt-2"
+                              className={`${
+                                activeItem === index
+                                  ? "underline underline-offset-8 "
+                                  : ""
+                              } text-wood-0 hover:text-forest-200 font-bold text-lg text-center px-5 pt-2`}
+                              onClick={() => onItemClick(index)}
                             >
                               {item.title}
                             </a>
@@ -100,6 +105,13 @@ export function MainNav({ items }: MainNavProps) {
                 className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-forest-50 hover:border-forest-300 hover:bg-forest-50 hover:text-wood-700"
               >
                 Become a Courier
+              </Disclosure.Button>
+              <Disclosure.Button
+                as="a"
+                href="#"
+                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-forest-50 hover:border-forest-300 hover:bg-forest-50 hover:text-wood-700"
+              >
+                Pricing
               </Disclosure.Button>
               <Disclosure.Button
                 as="a"
