@@ -369,7 +369,7 @@ export default function Page() {
       {/* FAQ */}
 
       <div className="bg-white px-6 lg:px-28 ">
-        <div className="mx-auto mb-16 max-w-full border-2  border-b-8 border-forest-900 rounded-3xl divide-x  px-6 py-6 lg:px-[72px] lg:py-10">
+        <div className="mx-auto mb-16 max-w-full border-2  border-b-8 border-forest-900 rounded-3xl   px-6 py-6 lg:px-[72px] lg:py-10">
           <h1 className="text-3xl lg:text-center font-bold leading-9 tracking-tight text-wood-900 sm:mt-10 lg:text-5xl">
             What do I need to start using ForestParcel?
           </h1>
