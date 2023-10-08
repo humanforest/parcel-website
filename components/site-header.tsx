@@ -8,11 +8,9 @@ import { MainNav } from "@/components/main-nav"
 export function SiteHeader() {
   const [activeNavItem, setActiveNavItem] = useState("")
 
-  // This effect will run when the pathname changes
   useEffect(() => {
     const currentPathname = window.location.pathname
 
-    // Find the matching navigation item based on the current pathname
     const activeItemIndex = siteConfig.mainNav.findIndex(
       (item) => item.href === currentPathname
     )
