@@ -1,7 +1,4 @@
-"use client"
-
 import * as React from "react"
-import { Fragment } from "react"
 import Link from "next/link"
 import { Disclosure } from "@headlessui/react"
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"
@@ -13,7 +10,7 @@ interface MainNavProps {
   items?: NavItem[]
 }
 
-export function MainNav({ items, activeItem, onItemClick }: MainNavProps) {
+export function MainNav({ items }: MainNavProps) {
   return (
     <Disclosure as="nav" className="bg-forest-800">
       {({ open }) => (
@@ -22,7 +19,10 @@ export function MainNav({ items, activeItem, onItemClick }: MainNavProps) {
             <div className="flex text-2xl justify-between">
               <div className="flex">
                 <div className="flex shrink-0 items-center">
-                  <Link href="/" className="flex items-center space-x-2">
+                  <Link
+                    href="/couriers"
+                    className="flex items-center space-x-2"
+                  >
                     <span className="inline-block font-bold text-forest-100">
                       Forest
                       <span className="text-forest-200">Parcel</span>
@@ -32,23 +32,15 @@ export function MainNav({ items, activeItem, onItemClick }: MainNavProps) {
                 <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
                   {items?.length ? (
                     <nav className="flex">
-                      {items?.map(
-                        (item, index) =>
-                          item.href && (
-                            <a
-                              key={index}
-                              href={item.href}
-                              className={`${
-                                activeItem === index
-                                  ? "underline underline-offset-8 "
-                                  : ""
-                              } text-wood-0 hover:text-forest-200 font-bold text-lg text-center px-5 pt-2`}
-                              onClick={() => onItemClick(index)}
-                            >
-                              {item.title}
-                            </a>
-                          )
-                      )}
+                      {items?.map((item, index) => (
+                        <Link
+                          key={index}
+                          href={item.href}
+                          className={`hover:text-forest-200 text-forest-50 font-bold text-lg text-center px-5 pt-2`}
+                        >
+                          {item.title}
+                        </Link>
+                      ))}
                     </nav>
                   ) : null}
                 </div>

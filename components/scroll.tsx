@@ -20,8 +20,6 @@ function ScrollableSections() {
 
     let newCurrentSection
 
-    // Check if the scroll position is greater than or equal to the container's top offset
-    // and less than the container's bottom offset
     if (
       scrollY >= containerTopOffset &&
       scrollY <= containerBottomOffset - windowHeight
@@ -61,15 +59,11 @@ function ScrollableSections() {
 
   return (
     <div className="sticky left-0 right-0 top-0 overflow-hidden">
-      {/* Outer sticky div */}
-
       <div className="relative bg-white mb-14 mx-auto max-w-full   lg:mt-24 px-6 lg:px-28">
-        {/* Your ScrollableSections component */}
         <div
           className={`h-[67vh] relative ${isSticky ? "sticky top-0" : ""}`}
           ref={scrollableContainerRef}
         >
-          {/* First section */}
           <div
             className={`h-full flex absolute top-0 left-0 w-full transition-opacity duration-500 overflow-hidden ${
               currentSection === 2 ? "opacity-100" : "opacity-0"
