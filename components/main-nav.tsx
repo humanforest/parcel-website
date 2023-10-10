@@ -4,7 +4,6 @@ import * as React from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Disclosure } from "@headlessui/react"
-// Import useRouter
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"
 
 import { NavItem } from "@/types/nav"
@@ -15,7 +14,7 @@ interface MainNavProps {
 }
 
 export function MainNav({ items }: MainNavProps) {
-  const pathname = usePathname() // Get the router instance
+  const pathname = usePathname()
 
   return (
     <Disclosure as="nav" className="bg-forest-800">
@@ -44,7 +43,7 @@ export function MainNav({ items }: MainNavProps) {
                           href={item.href}
                           className={`link ${
                             pathname === item.href
-                              ? "active underline underline-offset-8 " // Apply underline style for the active item
+                              ? "active underline underline-offset-8 "
                               : ""
                           } hover:text-forest-200 text-forest-50 font-bold text-lg text-center px-5 pt-2`}
                         >
