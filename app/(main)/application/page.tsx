@@ -6,23 +6,19 @@ const stats = [
     id: 1,
     name: "Download the app",
     value: "Step One",
-    image:
-"https://i.ibb.co/0Qq2FWy/Step1.png"
- 
-},
+    image: "https://i.ibb.co/0Qq2FWy/Step1.png",
+  },
   {
     id: 2,
     name: "Login",
     value: "Step Two",
-    image:
-      "https://i.ibb.co/j4nBF0W/StepTwo.png"
+    image: "https://i.ibb.co/j4nBF0W/StepTwo.png",
   },
   {
     id: 3,
     name: "Start Earning!",
     value: "Step Three",
-    image:
-      "https://i.ibb.co/vwHpfm3/Step-Three.png",
+    image: "https://i.ibb.co/vwHpfm3/Step-Three.png",
   },
 ]
 
@@ -50,7 +46,7 @@ export default function Page() {
                   src="https://www.intelligenttransport.com/wp-content/uploads/HumanForest-5.jpg"
                   alt=""
                   width={1280}
-                  height={1024} // Adjust the height based on the image aspect ratio
+                  height={1024}
                   className="rounded-2xl"
                 />
               </div>
