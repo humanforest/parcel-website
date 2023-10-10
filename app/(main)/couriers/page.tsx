@@ -2,7 +2,6 @@ import Link from "next/link"
 
 import { buttonVariants } from "@/components/ui/button"
 import ScrollableSections from "@/components/scroll"
-import { SiteHeader } from "@/components/site-header"
 
 export const metadata = {
   title: "Couriers",
