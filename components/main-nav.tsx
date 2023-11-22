@@ -40,7 +40,7 @@ export function MainNav({ items }: MainNavProps) {
                       {items?.map((item, index) => (
                         <Link
                           key={index}
-                          href={item.href}
+                          href={item.href || '#'}
                           className={`link ${
                             pathname === item.href
                               ? "active underline underline-offset-8 "
