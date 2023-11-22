@@ -65,16 +65,16 @@ export default function Page() {
   return (
     <div className="bg-white ">
       <div className="relative bg-forest-800 pb-20">
-        <div className="mx-auto max-w-full lg:grid lg:grid-cols-12 sm:grid-cols-1 lg:gap-x-8 lg:px-28 lg:h-[657px] sm:h-[685px] px-6  top-24">
+        <div className="top-24 mx-auto max-w-full px-6 sm:h-[685px] sm:grid-cols-1 lg:grid lg:h-[657px] lg:grid-cols-12 lg:gap-x-8  lg:px-28">
           {/* Images */}
 
-          <div className="lg:absolute order-2 lg:order-1 lg:col-span-5 lg:-mr-8 lg:inset-0 lg:left-1/2 lg:mr-0 xs:pt-6 flex items-center justify-center">
-            <div className="relative lg:w-[529px]  lg:h-[529px] h-[317px] w-[317px]  aspect-square rounded-full">
+          <div className="xs:pt-6 order-2 flex items-center justify-center lg:absolute lg:inset-0 lg:left-1/2 lg:order-1 lg:col-span-5 lg:-mr-8">
+            <div className="relative aspect-square  h-[317px] w-[317px] rounded-full  lg:h-[529px] lg:w-[529px]">
               <img src="/Images/Hero1Bike.png" alt="pie_chart" className="" />
 
-              <div className="absolute w-[35%] h-[35%] top-8 -left-8 z-10">
+              <div className="absolute -left-8 top-8 z-10 h-[35%] w-[35%]">
                 <div
-                  className="bg-contain bg-no-repeat bg-center"
+                  className="bg-contain bg-center bg-no-repeat"
                   style={{
                     backgroundImage: `url("/Images/Layer_1.png")`,
                     width: "70%",
@@ -83,9 +83,9 @@ export default function Page() {
                 />
               </div>
               <div>
-                <div className="absolute w-[40%] h-[40%] -bottom-12 -right-8 z-10">
+                <div className="absolute -bottom-12 -right-8 z-10 h-[40%] w-[40%]">
                   <div
-                    className="bg-contain bg-no-repeat bg-center"
+                    className="bg-contain bg-center bg-no-repeat"
                     style={{
                       backgroundImage: `url("/Images/Frame_2470.png")`,
                       width: "70%",
@@ -93,9 +93,9 @@ export default function Page() {
                     }}
                   />
                 </div>
-                <div className="absolute w-[40%] h-[40%] right-0  -bottom-8 z-9">
+                <div className="z-9 absolute -bottom-8 right-0  h-[40%] w-[40%]">
                   <div
-                    className="bg-contain bg-no-repeat bg-center"
+                    className="bg-contain bg-center bg-no-repeat"
                     style={{
                       backgroundImage: `url("/Images/Vector_140.png")`,
                       width: "70%",
@@ -109,16 +109,16 @@ export default function Page() {
 
           {/* Text */}
 
-          <div className="flex sm:gap-10  order-1 lg:order-2 sm:pb-32 lg:col-span-7 lg:py-48 xl:col-span-6">
-            <div className="mx-auto lg:mx-0 pt-10">
-              <h1 className="lg:text-5xl text-2xl font-bold tracking-tight text-white  ">
+          <div className="order-1 flex  sm:gap-10 sm:pb-32 lg:order-2 lg:col-span-7 lg:py-48 xl:col-span-6">
+            <div className="mx-auto pt-10 lg:mx-0">
+              <h1 className="text-2xl font-bold tracking-tight text-white lg:text-5xl  ">
                 Deliver with Forest Parcel
               </h1>
 
               <p className="mt-6 text-lg text-gray-100">
-                Complete Jobs when it's convenient for you
+                Complete Jobs when it&apos;s convenient for you
               </p>
-              <div className="mt-10 mb-12 flex">
+              <div className="mb-12 mt-10 flex">
                 <Link
                   href="/application"
                   className={buttonVariants({
@@ -130,7 +130,7 @@ export default function Page() {
                 >
                   Apply Now
                 </Link>
-                <div className="lg:hidden xs:flex">
+                <div className="xs:flex lg:hidden">
                   <Link
                     href="/application"
                     className={buttonVariants({
@@ -160,10 +160,10 @@ export default function Page() {
 
       {/* Benefits Section */}
 
-      <div className="bg-white mt-20">
+      <div className="mt-20 bg-white">
         <div className="mx-auto max-w-full px-6 lg:px-28">
           <div className="text-center">
-            <h1 className="text-3xl lg:text-5xl font-bold tracking-tight text-wood-900 justify-center">
+            <h1 className="justify-center text-3xl font-bold tracking-tight text-wood-900 lg:text-5xl">
               Join Our Delivery Team Today
             </h1>
             <p className="mt-6 text-lg leading-8 text-wood-700">
@@ -171,29 +171,29 @@ export default function Page() {
               member of our delivery network.
             </p>
           </div>
-          <div className="w-full scroll whitespace-nowrap scroll-smooth overflow-x-auto scroll-left">
-            <div className="flex lg:justify-center space-x-12 items-center">
-              <div className="mt-16 mb-16 lg:grid lg:gap-10 lg:grid-cols-6 ">
+          <div className="scroll scroll-left w-full overflow-x-auto scroll-smooth whitespace-nowrap">
+            <div className="flex items-center space-x-12 lg:justify-center">
+              <div className="my-16 lg:grid lg:grid-cols-6 lg:gap-10">
                 {benefits.map((item, index) => (
                   <div
                     key={index}
-                    className={`w-80 lg:w-auto inline-block mr-4 lg:mr-0 lg:flex lg:flex-col items-center border-2 border-forest-900 border-b-4 rounded-3xl p-4 lg:p-6 ${
+                    className={`mr-4 inline-block w-80 items-center rounded-3xl border-2 border-b-4 border-forest-900 p-4 lg:mr-0 lg:flex lg:w-auto lg:flex-col lg:p-6 ${
                       index === 3
-                        ? "lg:col-span-3  mr-4 lg:ml-40 w-80 lg:w-auto"
+                        ? "mr-4  w-80 lg:col-span-3 lg:ml-40 lg:w-auto"
                         : index === 4
-                        ? "lg:col-span-3 mr-4 lg:mr-40 w-80 lg:w-auto "
+                        ? "mr-4 w-80 lg:col-span-3 lg:mr-40 lg:w-auto "
                         : "lg:col-span-2"
                     }`}
                   >
-                    <div className="flex justify-center items-center">
+                    <div className="flex items-center justify-center">
                       <img
                         src="/Images/Group_624720.png"
                         alt="pie_chart"
-                        className="w-[74.53px] h-[80px] "
+                        className="h-[80px] w-[74.53px] "
                       />
                     </div>
                     <h2 className="mt-2 text-center font-bold">{item.title}</h2>
-                    <p className="mt-2 text-center text-wood-700 text-md ">
+                    <p className="text-md mt-2 text-center text-wood-700 ">
                       {item.description}
                     </p>
                   </div>
@@ -206,35 +206,35 @@ export default function Page() {
 
       {/* Scroll Section */}
 
-      <div className="relative h-[335vh] bg-white hidden sm:block">
+      <div className="relative hidden h-[335vh] bg-white sm:block">
         <ScrollableSections />
       </div>
 
       {/* Testimonials */}
 
       <div className="relative bg-forest-800">
-        <div className="text-center pt-16 px-6 lg:px-28">
-          <h1 className="text-3xl lg:text-5xl font-bold tracking-tight text-wood-0 items-center justify-center">
+        <div className="px-6 pt-16 text-center lg:px-28">
+          <h1 className="items-center justify-center text-3xl font-bold tracking-tight text-wood-0 lg:text-5xl">
             Testimonials
           </h1>
         </div>
-        <div className="whitespace-nowrap overflow-hidden ">
-          <div className="relative flex items-center justify-center mx-auto text-center pt-14 lg:pb-12 pb-6 -ml-16 lg:-ml-0 lg:pb-24">
+        <div className="overflow-hidden whitespace-nowrap ">
+          <div className="relative mx-auto -ml-16 flex items-center justify-center pb-6 pt-14 text-center lg:-ml-0 lg:pb-12">
             <div>
               <img
-                className="w-[160px] lg:w-[320px] inline-block p-2 "
+                className="inline-block w-[160px] p-2 lg:w-[320px] "
                 src="/Images/Testimonial1.png"
                 alt="/"
               />
-              <div className="relative aspect-square inline-block p-2 ">
+              <div className="relative inline-block aspect-square p-2 ">
                 <img
-                  className="w-[210px] h-[210px] lg:w-[432px] lg:h-[432px] inline-block p-2"
+                  className="inline-block h-[210px] w-[210px] p-2 lg:h-[432px] lg:w-[432px]"
                   src="/Images/Testimonial2.png"
                   alt="/"
                 />
-                <div className="absolute w-full -top-20 -left-10 lg:-top-40 z-10">
+                <div className="absolute -left-10 -top-20 z-10 w-full lg:-top-40">
                   <div
-                    className="bg-contain bg-no-repeat bg-center"
+                    className="bg-contain bg-center bg-no-repeat"
                     style={{
                       backgroundImage: `url("/Images/MusaSmith.png")`,
                       width: "60%",
@@ -242,9 +242,9 @@ export default function Page() {
                     }}
                   />
                 </div>
-                <div className="absolute w-[25%] h-[25%] left-12  top-8 lg:top-14 lg:left-20 z-9">
+                <div className="z-9 absolute left-12 top-8  h-[25%] w-[25%] lg:left-20 lg:top-14">
                   <div
-                    className="bg-contain bg-no-repeat bg-center"
+                    className="bg-contain bg-center bg-no-repeat"
                     style={{
                       backgroundImage: `url("/Images/Vector_141.png")`,
                       width: "70%",
@@ -253,9 +253,9 @@ export default function Page() {
                   />
                 </div>
 
-                <div className="hidden w-full -bottom-52 left-16 z-10  absolute lg:flex ">
+                <div className="absolute -bottom-52 left-16 z-10 hidden  w-full lg:flex ">
                   <div
-                    className="bg-contain bg-no-repeat bg-center"
+                    className="bg-contain bg-center bg-no-repeat"
                     style={{
                       backgroundImage: `url("/Images/testimonial.png")`,
                       width: "60%",
@@ -265,18 +265,18 @@ export default function Page() {
                 </div>
               </div>
               <img
-                className="w-[160px] lg:w-[320px] inline-block p-2 "
+                className="inline-block w-[160px] p-2 lg:w-[320px] "
                 src="/Images/Testimonial3.png"
                 alt="/"
               />
             </div>
           </div>
         </div>
-        <div className="lg:hidden pb-6 ml-4 mr-4">
-          <p className="text-lg font-normal text-center text-wood-50 italic ">
-            "I truly appreciate the effort and attention Forest Parcel puts into
+        <div className="mx-4 pb-6 lg:hidden">
+          <p className="text-center text-lg font-normal italic text-wood-50 ">
+            &quot;I truly appreciate the effort and attention Forest Parcel puts into
             gathering feedback from users. It shows a genuine commitment to
-            improving the service for everyone involved."
+            improving the service for everyone involved.&quot;
           </p>
         </div>
       </div>
@@ -284,18 +284,18 @@ export default function Page() {
       {/* eBikes */}
 
       <div className="relative bg-white ">
-        <div className="mx-auto max-w-full lg:grid lg:grid-cols-12 mt-12 lg:mb-16 lg:mt-24 px-6 lg:gap-x-8 lg:px-28">
-          <div className=" lg:absolute order-2 lg:order-1 lg:col-span-5 lg:inset-0 lg:left-1/2 xs:pt-32 lg:flex items-center ">
-            <div className="relative w-[342px] lg:w-[529px] aspect-square rounded-full ">
+        <div className="mx-auto mt-12 max-w-full px-6 lg:mb-16 lg:mt-24 lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-28">
+          <div className=" xs:pt-32 order-2 items-center lg:absolute lg:inset-0 lg:left-1/2 lg:order-1 lg:col-span-5 lg:flex ">
+            <div className="relative aspect-square w-[342px] rounded-full lg:w-[529px] ">
               <img
-                className="w-[327px] h-[327px] lg:w-[529px] lg:h-[529px] bg-contain bg-no-repeat bg-center rounded-full"
+                className="h-[327px] w-[327px] rounded-full bg-contain bg-center bg-no-repeat lg:h-[529px] lg:w-[529px]"
                 style={{
                   backgroundImage: `url("Images/eBike1.png")`,
                 }}
               />
-              <div className="absolute w-[35%] h-[35%] top-0 left-25 z-10">
+              <div className="left-25 absolute top-0 z-10 h-[35%] w-[35%]">
                 <div
-                  className="bg-contain bg-no-repeat bg-center"
+                  className="bg-contain bg-center bg-no-repeat"
                   style={{
                     backgroundImage: `url("/Images/Frame_2470.png")`,
                     width: "70%",
@@ -304,9 +304,9 @@ export default function Page() {
                 />
               </div>
               <div>
-                <div className="absolute w-[70%] h-[70%] -bottom-20 -right-24 lg:-right-32 lg:-bottom-32 z-10">
+                <div className="absolute -bottom-20 -right-24 z-10 h-[70%] w-[70%] lg:-bottom-32 lg:-right-32">
                   <div
-                    className="bg-contain bg-no-repeat bg-center"
+                    className="bg-contain bg-center bg-no-repeat"
                     style={{
                       backgroundImage: `url("/Images/bike.png")`,
                       width: "70%",
@@ -319,29 +319,29 @@ export default function Page() {
           </div>
 
           {/* Text */}
-          <div className="flex pb-24 pt-10 order-1 lg:order-2 sm:pb-32 lg:col-span-7 lg:px-0 xl:col-span-6">
+          <div className="order-1 flex pb-24 pt-10 sm:pb-32 lg:order-2 lg:col-span-7 lg:px-0 xl:col-span-6">
             <div className="mx-auto max-w-full lg:mx-0">
-              <div className="flex col-span-2">
-                <h3 className="font-bold px-2 text-forest-500 border-4 border-forest-100 rounded-full bg-forest-100">
+              <div className="col-span-2 flex">
+                <h3 className="rounded-full border-4 border-forest-100 bg-forest-100 px-2 font-bold text-forest-500">
                   eBikes
                 </h3>
               </div>
 
-              <h1 className="text-3xl font-bold tracking-tight text-wood-900 sm:mt-10 lg:text-5xl pb-4">
+              <h1 className="pb-4 text-3xl font-bold tracking-tight text-wood-900 sm:mt-10 lg:text-5xl">
                 No Bike? No Problem.
               </h1>
-              <p className="pb-4 font-normal text-lg leading-7 text-wood-700">
+              <p className="pb-4 text-lg font-normal leading-7 text-wood-700">
                 The best way to move around the city. Our whole fleet is
                 electric and we are committed to reducing emissions in our
                 cities.
               </p>
-              <div className="flex whitespace-nowrap gap-2 mt-4">
-                <div className="border-b-4 flex flex-col border-2 border-forest-900 bg-cassia-200 rounded-3xl p-4 ">
+              <div className="mt-4 flex gap-2 whitespace-nowrap">
+                <div className="flex flex-col rounded-3xl border-2 border-b-4 border-forest-900 bg-cassia-200 p-4 ">
                   <h2 className="mt-2 text-2xl font-bold leading-7">3,000+</h2>
                   <p>Electric Bikes</p>
                 </div>
 
-                <div className="border-b-4 flex flex-col border-2 border-forest-900 rounded-3xl p-4 ">
+                <div className="flex flex-col rounded-3xl border-2 border-b-4 border-forest-900 p-4 ">
                   <h2 className="mt-2 text-2xl font-bold leading-7">
                     Up to 50%
                   </h2>
@@ -369,26 +369,26 @@ export default function Page() {
       {/* FAQ */}
 
       <div className="bg-white px-6 lg:px-28 ">
-        <div className="mx-auto mb-16 max-w-full border-2  border-b-8 border-forest-900 rounded-3xl   px-6 py-6 lg:px-[72px] lg:py-10">
-          <h1 className="text-3xl lg:text-center font-bold leading-9 tracking-tight text-wood-900 sm:mt-10 lg:text-5xl">
+        <div className="mx-auto mb-16 max-w-full rounded-3xl  border-2 border-b-8 border-forest-900   p-6 lg:px-[72px] lg:py-10">
+          <h1 className="text-3xl font-bold leading-9 tracking-tight text-wood-900 sm:mt-10 lg:text-center lg:text-5xl">
             What do I need to start using ForestParcel?
           </h1>
-          <p className="mt-6  text-lg font-normal lg:text-center leading-8 text-wood-700">
+          <p className="mt-6  text-lg font-normal leading-8 text-wood-700 lg:text-center">
             Be sure to have the following information ready:
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8 lg:mt-16 mt-6">
+          <div className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-2 lg:mt-16 lg:grid-cols-2 xl:grid-cols-2">
             {faqs.map((faq) => (
-              <div key={faq.id} className="lg:p-4 mb-10">
-                <h2 className="text-xl font-bold text-forest-900 lg:mb-2 mb-4">
+              <div key={faq.id} className="mb-10 lg:p-4">
+                <h2 className="mb-4 text-xl font-bold text-forest-900 lg:mb-2">
                   {faq.question}
                 </h2>
-                <ul className="list-disc list-inside text-wood-700 text-lg lg:pt-4">
+                <ul className="list-inside list-disc text-lg text-wood-700 lg:pt-4">
                   {faq.answer.map((item, index) => (
-                    <li key={index} className="flex mt-4">
+                    <li key={index} className="mt-4 flex">
                       {typeof item === "object" ? (
                         <a
                           href={item.link}
-                          className="text-forest-500 hover:underline pl-10 -mt-3 inline-flex"
+                          className="-mt-3 inline-flex pl-10 text-forest-500 hover:underline"
                         >
                           {item.text}
                         </a>
@@ -397,7 +397,7 @@ export default function Page() {
                           <img
                             src="/Images/check.png"
                             alt="check"
-                            className="mr-4 mt-0.5 h-6 w-6 aspect-square"
+                            className="mr-4 mt-0.5 aspect-square h-6 w-6"
                           />
                           {item}
                         </>
@@ -408,7 +408,7 @@ export default function Page() {
               </div>
             ))}
           </div>
-          <p className="mt-6 text-lg font-normal lg:text-center leading-8 text-wood-700 pb-6">
+          <p className="mt-6 pb-6 text-lg font-normal leading-8 text-wood-700 lg:text-center">
             If you have any questions, please contact us at{" "}
             <a
               href="mailto:parcel@humanforest.co.uk"
@@ -417,7 +417,7 @@ export default function Page() {
               parcel@humanforest.co.uk
             </a>
           </p>
-          <div className="lg:mt-10 lg:mb-16 flex lg:justify-center gap-x-6">
+          <div className="flex gap-x-6 lg:mb-16 lg:mt-10 lg:justify-center">
             <Link
               href="/application"
               className={buttonVariants({
@@ -434,14 +434,14 @@ export default function Page() {
 
       {/* Footer */}
 
-      <div className="bg-forest-800 relative ">
-        <div className="mx-auto max-w-full px-6 lg:px-28 grid">
-          <div className="order-2 lg:order-1 grid lg:text-center">
-            <h1 className="text-3xl lg:text-5xl font-bold tracking-tight text-wood-0 justify-center mt-10 lg:mt-12 lg:leading-[62px] ">
+      <div className="relative bg-forest-800 ">
+        <div className="mx-auto grid max-w-full px-6 lg:px-28">
+          <div className="order-2 grid lg:order-1 lg:text-center">
+            <h1 className="mt-10 justify-center text-3xl font-bold tracking-tight text-wood-0 lg:mt-12 lg:text-5xl lg:leading-[62px] ">
               Boost your delivery service. <br />
               Start using ForestParcel today.
             </h1>
-            <p className="mt-6 text-lg leading-8 text-wood-0 pb-10 lg:pb-12">
+            <p className="mt-6 pb-10 text-lg leading-8 text-wood-0 lg:pb-12">
               Get started with a free account. Sign up now and start delivering
               parcels in no time.
             </p>
@@ -458,11 +458,11 @@ export default function Page() {
               </Link>
             </div>
           </div>
-          <div className="order-1 lg:order-2 grid lg:justify-items-center">
-            <div className="inline-flex relative w-[342px] h-[200px] lg:w-[633px] lg:h-[366px]  justify-center items-center">
-              <div className="absolute w-[45%] h-[45%] -top-4">
+          <div className="order-1 grid lg:order-2 lg:justify-items-center">
+            <div className="relative inline-flex h-[200px] w-[342px] items-center justify-center  lg:h-[366px] lg:w-[633px]">
+              <div className="absolute -top-4 h-[45%] w-[45%]">
                 <div
-                  className="bg-contain bg-no-repeat bg-center"
+                  className="bg-contain bg-center bg-no-repeat"
                   style={{
                     backgroundImage: `url("/Images/cloud.png")`,
                     width: "40%",
@@ -470,9 +470,9 @@ export default function Page() {
                   }}
                 />
               </div>
-              <div className="absolute w-[30%] h-[30%] left-10 bottom-20">
+              <div className="absolute bottom-20 left-10 h-[30%] w-[30%]">
                 <div
-                  className="bg-contain bg-no-repeat bg-center"
+                  className="bg-contain bg-center bg-no-repeat"
                   style={{
                     backgroundImage: `url("/Images/Layer_1.png")`,
                     width: "60%",
@@ -480,9 +480,9 @@ export default function Page() {
                   }}
                 />
               </div>
-              <div className="absolute w-[65%] h-[65%]">
+              <div className="absolute h-[65%] w-[65%]">
                 <div
-                  className="bg-contain bg-no-repeat bg-center"
+                  className="bg-contain bg-center bg-no-repeat"
                   style={{
                     backgroundImage: `url("/Images/bike.png")`,
                     width: "100%",
@@ -490,9 +490,9 @@ export default function Page() {
                   }}
                 />
               </div>
-              <div className="absolute w-[30%] h-[30%] -right-4 bottom-16">
+              <div className="absolute -right-4 bottom-16 h-[30%] w-[30%]">
                 <div
-                  className="bg-contain bg-no-repeat bg-center"
+                  className="bg-contain bg-center bg-no-repeat"
                   style={{
                     backgroundImage: `url("/Images/CuteTree.png")`,
                     width: "60%",

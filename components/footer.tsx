@@ -9,14 +9,14 @@ export default function Footer() {
     <footer className="bg-forest-800">
       <div className="mx-auto max-w-full overflow-hidden px-6 py-12 sm:py-24 lg:px-8">
         <nav
-          className="-mb-6 columns-3 flex justify-center gap-x-4 sm:space-x-12"
+          className="-mb-6 flex columns-3 justify-center gap-x-4 sm:space-x-12"
           aria-label="Footer"
         >
           {navigation.map((item) => (
             <div key={item.name} className="pb-6">
               <a
                 href={item.href}
-                className="text-sm leading-6 text-wood-0 hover:text-green-200 underline"
+                className="text-sm leading-6 text-wood-0 underline hover:text-green-200"
               >
                 {item.name}
               </a>

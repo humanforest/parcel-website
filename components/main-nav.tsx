@@ -20,8 +20,8 @@ export function MainNav({ items }: MainNavProps) {
     <Disclosure as="nav" className="bg-forest-800">
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-full py-6 px-6 lg:px-28">
-            <div className="flex text-2xl justify-between">
+          <div className="mx-auto max-w-full p-6 lg:px-28">
+            <div className="flex justify-between text-2xl">
               <div className="flex">
                 <div className="flex shrink-0 items-center">
                   <Link
@@ -40,12 +40,12 @@ export function MainNav({ items }: MainNavProps) {
                       {items?.map((item, index) => (
                         <Link
                           key={index}
-                          href={item.href}
+                          href={item.href || '#'}
                           className={`link ${
                             pathname === item.href
                               ? "active underline underline-offset-8 "
                               : ""
-                          } hover:text-forest-200 text-forest-50 font-bold text-lg text-center px-5 pt-2`}
+                          } px-5 pt-2 text-center text-lg font-bold text-forest-50 hover:text-forest-200`}
                         >
                           {item.title}
                         </Link>
@@ -54,7 +54,7 @@ export function MainNav({ items }: MainNavProps) {
                   ) : null}
                 </div>
               </div>
-              <div className="hidden lg:flex space-x-4">
+              <div className="hidden space-x-4 lg:flex">
                 <Link
                   href="/application"
                   className={buttonVariants({
