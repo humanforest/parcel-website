@@ -6,7 +6,7 @@ import Link from "next/link"
 import { buttonVariants } from "@/components/ui/button"
 
 function ScrollableSections() {
-  const scrollableContainerRef = useRef(null)
+  const scrollableContainerRef = useRef<HTMLDivElement | null>(null)
   const [currentSection, setCurrentSection] = useState(1)
   const [isSticky, setIsSticky] = useState(false) // Initialize as false
   const [isScrollStarted, setIsScrollStarted] = useState(false)
@@ -15,7 +15,7 @@ function ScrollableSections() {
     const scrollY = window.scrollY || window.pageYOffset
     const windowHeight = window.innerHeight
     const sectionHeight = windowHeight
-    const containerTopOffset = scrollableContainerRef.current.offsetTop
+    const containerTopOffset = scrollableContainerRef.current ? scrollableContainerRef.current.offsetTop : 0;
     const containerBottomOffset = containerTopOffset + sectionHeight
 
     let newCurrentSection
