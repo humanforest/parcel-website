@@ -58,30 +58,30 @@ function ScrollableSections() {
   }, [])
 
   return (
-    <div className="sticky left-0 right-0 top-0 overflow-hidden">
-      <div className="relative bg-white mb-14 mx-auto max-w-full   lg:mt-24 px-6 lg:px-28">
+    <div className="sticky inset-x-0 top-0 overflow-hidden">
+      <div className="relative mx-auto mb-14 max-w-full bg-white   px-6 lg:mt-24 lg:px-28">
         <div
-          className={`h-[67vh] relative ${isSticky ? "sticky top-0" : ""}`}
+          className={`relative h-[67vh] ${isSticky ? "sticky top-0" : ""}`}
           ref={scrollableContainerRef}
         >
           <div
-            className={`h-full flex absolute top-0 left-0 w-full transition-opacity duration-500 overflow-hidden ${
+            className={`absolute left-0 top-0 flex h-full w-full overflow-hidden transition-opacity duration-500 ${
               currentSection === 2 ? "opacity-100" : "opacity-0"
             }`}
           >
             {" "}
-            <div className=" flex grid grid-cols-12">
-              <div className="lg:col-span-5 pt-14 xs:pt-32">
+            <div className="grid grid-cols-12">
+              <div className="xs:pt-32 pt-14 lg:col-span-5">
                 <img
                   src="/Images/MikeyBike.png"
                   alt="manOnBike"
-                  className="w-[500px] h-[520px]"
+                  className="h-[520px] w-[500px]"
                 />
               </div>
-              <div className="lg:col-span-7 lg:left-1/2">
-                <div className="flex pb-24 pt-14 lg:col-span-7 lg:left-1/2 lg:px-0 xl:col-span-6 lg:order-2">
-                  <div className="mx-auto max-w-full lg:ml-6 justify-center items-center pl-16">
-                    <h1 className="text-5xl font-bold tracking-tight text-wood-900 justify-center leading-[3.5rem]">
+              <div className="lg:left-1/2 lg:col-span-7">
+                <div className="flex pb-24 pt-14 lg:left-1/2 lg:order-2 lg:col-span-7 lg:px-0 xl:col-span-6">
+                  <div className="mx-auto max-w-full items-center justify-center pl-16 lg:ml-6">
+                    <h1 className="justify-center text-5xl font-bold leading-[3.5rem] tracking-tight text-wood-900">
                       An innovative and sustainable way to deliver packages
                       across London
                     </h1>
@@ -89,7 +89,7 @@ function ScrollableSections() {
                       <img
                         src="/Images/One.png"
                         alt="one"
-                        className="w-[52px] h-[52px]"
+                        className="h-[52px] w-[52px]"
                       />
                       <Link
                         href="/application"
@@ -110,23 +110,23 @@ function ScrollableSections() {
 
           {/* Second section */}
           <div
-            className={`h-full flex absolute top-0 left-0 w-full transition-opacity duration-500 overflow-hidden ${
+            className={`absolute left-0 top-0 flex h-full w-full overflow-hidden transition-opacity duration-500 ${
               currentSection === 3 ? "opacity-100" : "opacity-0"
             }`}
           >
             {" "}
-            <div className="flex grid grid-cols-12">
-              <div className="lg:col-span-5 pt-14 xs:pt-32">
+            <div className="grid grid-cols-12">
+              <div className="xs:pt-32 pt-14 lg:col-span-5">
                 <img
                   src="/Images/PhoneSlide1.png"
                   alt="manOnBike"
-                  className="w-[450px] h-[534px]"
+                  className="h-[534px] w-[450px]"
                 />
               </div>
-              <div className="lg:col-span-7 lg:left-1/2">
-                <div className="flex pb-24 pt-14 lg:col-span-7 lg:left-1/2 lg:px-0 xl:col-span-6 lg:order-2">
-                  <div className="mx-auto max-w-full lg:ml-6 justify-center items-center pl-16">
-                    <h1 className="text-5xl font-bold tracking-tight text-wood-900 justify-center leading-[3.5rem]">
+              <div className="lg:left-1/2 lg:col-span-7">
+                <div className="flex pb-24 pt-14 lg:left-1/2 lg:order-2 lg:col-span-7 lg:px-0 xl:col-span-6">
+                  <div className="mx-auto max-w-full items-center justify-center pl-16 lg:ml-6">
+                    <h1 className="justify-center text-5xl font-bold leading-[3.5rem] tracking-tight text-wood-900">
                       An innovative and sustainable way to deliver packages
                       across London
                     </h1>
@@ -134,7 +134,7 @@ function ScrollableSections() {
                       <img
                         src="/Images/One.png"
                         alt="one"
-                        className="w-[52px] h-[52px]"
+                        className="h-[52px] w-[52px]"
                       />
                       <Link
                         href="/application"
@@ -151,7 +151,7 @@ function ScrollableSections() {
                       <img
                         src="/Images/Two.png"
                         alt="two"
-                        className="w-[52px] h-[52px]"
+                        className="h-[52px] w-[52px]"
                       />
                       <p className="text-lg font-bold text-wood-900">
                         Start the order (booking).
@@ -165,23 +165,23 @@ function ScrollableSections() {
 
           {/* Third section */}
           <div
-            className={`h-full flex absolute top-0 left-0 w-full transition-opacity duration-500 overflow-hidden ${
+            className={`absolute left-0 top-0 flex h-full w-full overflow-hidden transition-opacity duration-500 ${
               currentSection === 4 ? "opacity-100" : "opacity-0"
             }`}
           >
             {" "}
-            <div className="flex grid grid-cols-12">
-              <div className="lg:col-span-5 pt-14 xs:pt-32">
+            <div className="grid grid-cols-12">
+              <div className="xs:pt-32 pt-14 lg:col-span-5">
                 <img
                   src="/Images/PhoneSlide2.png"
                   alt="manOnBike"
-                  className="w-[450px] h-[534px]"
+                  className="h-[534px] w-[450px]"
                 />
               </div>
-              <div className="lg:col-span-7 lg:left-1/2">
-                <div className="flex pb-24 pt-14 lg:col-span-7 lg:left-1/2 lg:px-0 xl:col-span-6 lg:order-2">
-                  <div className="mx-auto max-w-full lg:ml-6 justify-center items-center pl-16">
-                    <h1 className="text-5xl font-bold tracking-tight text-wood-900 justify-center leading-[3.5rem]">
+              <div className="lg:left-1/2 lg:col-span-7">
+                <div className="flex pb-24 pt-14 lg:left-1/2 lg:order-2 lg:col-span-7 lg:px-0 xl:col-span-6">
+                  <div className="mx-auto max-w-full items-center justify-center pl-16 lg:ml-6">
+                    <h1 className="justify-center text-5xl font-bold leading-[3.5rem] tracking-tight text-wood-900">
                       An innovative and sustainable way to deliver packages
                       across London
                     </h1>
@@ -189,7 +189,7 @@ function ScrollableSections() {
                       <img
                         src="/Images/One.png"
                         alt="manOnBike"
-                        className="w-[52px] h-[52px]"
+                        className="h-[52px] w-[52px]"
                       />
                       <Link
                         href="/application"
@@ -206,7 +206,7 @@ function ScrollableSections() {
                       <img
                         src="/Images/Two.png"
                         alt="two"
-                        className="w-[52px] h-[52px]"
+                        className="h-[52px] w-[52px]"
                       />
                       <p className="text-lg font-bold text-wood-900">
                         Start the order (booking).
@@ -216,10 +216,10 @@ function ScrollableSections() {
                       <img
                         src="/Images/Three.png"
                         alt="three"
-                        className="w-[52px] h-[52px]"
+                        className="h-[52px] w-[52px]"
                       />
                       <p className="text-lg font-bold text-wood-900">
-                        Navigate to "Pick up point" and pick up parcel.
+                        Navigate to &quot;Pick up point&quot; and pick up parcel.
                       </p>
                     </div>
                   </div>
@@ -230,23 +230,23 @@ function ScrollableSections() {
 
           {/* Fourth section */}
           <div
-            className={`h-full flex absolute top-0 left-0 w-full transition-opacity duration-500  ${
+            className={`absolute left-0 top-0 flex h-full w-full transition-opacity duration-500  ${
               currentSection === 5 ? "opacity-100" : "opacity-0"
             }`}
           >
             {" "}
-            <div className="flex grid grid-cols-12">
-              <div className="lg:col-span-5 pt-14 xs:pt-32">
+            <div className="grid grid-cols-12">
+              <div className="xs:pt-32 pt-14 lg:col-span-5">
                 <img
                   src="/Images/PhoneSlide3.png"
                   alt="manOnBike"
-                  className="w-[650px] h-[524px]"
+                  className="h-[524px] w-[650px]"
                 />
               </div>
-              <div className="lg:col-span-7 lg:left-1/2">
-                <div className="flex pb-24 pt-14 lg:col-span-7 lg:left-1/2 lg:px-0 xl:col-span-6 lg:order-2">
-                  <div className="mx-auto max-w-full lg:ml-6 justify-center items-center pl-16">
-                    <h1 className="text-5xl font-bold tracking-tight text-wood-900 justify-center leading-[3.5rem]">
+              <div className="lg:left-1/2 lg:col-span-7">
+                <div className="flex pb-24 pt-14 lg:left-1/2 lg:order-2 lg:col-span-7 lg:px-0 xl:col-span-6">
+                  <div className="mx-auto max-w-full items-center justify-center pl-16 lg:ml-6">
+                    <h1 className="justify-center text-5xl font-bold leading-[3.5rem] tracking-tight text-wood-900">
                       An innovative and sustainable way to deliver packages
                       across London
                     </h1>
@@ -254,7 +254,7 @@ function ScrollableSections() {
                       <img
                         src="/Images/One.png"
                         alt="manOnBike"
-                        className="w-[52px] h-[52px]"
+                        className="h-[52px] w-[52px]"
                       />
                       <Link
                         href="/application"
@@ -271,7 +271,7 @@ function ScrollableSections() {
                       <img
                         src="/Images/Two.png"
                         alt="two"
-                        className="w-[52px] h-[52px]"
+                        className="h-[52px] w-[52px]"
                       />
                       <p className="text-lg font-bold text-wood-900">
                         Start the order (booking).
@@ -281,20 +281,20 @@ function ScrollableSections() {
                       <img
                         src="/Images/Three.png"
                         alt="three"
-                        className="w-[52px] h-[52px]"
+                        className="h-[52px] w-[52px]"
                       />
                       <p className="text-lg font-bold text-wood-900">
-                        Navigate to "Pick up point" and pick up parcel.
+                        Navigate to &quot;Pick up point&quot; and pick up parcel.
                       </p>
                     </div>
                     <div className="mt-10 flex items-center gap-x-6">
                       <img
                         src="/Images/Four.png"
                         alt="four"
-                        className="w-[52px] h-[52px]"
+                        className="h-[52px] w-[52px]"
                       />
                       <p className="text-lg font-bold text-wood-900">
-                        Navigate to "Drop off point" and complete the delivery.
+                        Navigate to &quot;Drop off point&quot; and complete the delivery.
                       </p>
                     </div>
                   </div>
