@@ -10,7 +10,7 @@ export const siteConfig = {
     },
     {
       title: "Become a Courier",
-      href: "/application",
+      href: "/application-form",
     },
     {
       title: "Pricing",
